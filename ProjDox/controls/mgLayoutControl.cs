@@ -143,10 +143,10 @@ namespace mgControls
 				elementForm.Color.BackColor =
 				elementPanel.Color.BackColor =
 				elementPanelNoBorder.Color.BackColor =
-				panelBottom.Color.SolidImageCenterColor =
-				panelTop.Color.SolidImageCenterColor =
-				panelLeft.Color.SolidImageCenterColor =
-				panelRight.Color.SolidImageCenterColor =
+				//panelBottom.Color.SolidImageCenterColor =
+				//panelTop.Color.SolidImageCenterColor =
+				//panelLeft.Color.SolidImageCenterColor =
+				//panelRight.Color.SolidImageCenterColor =
 				element.Color.SolidImageCenterColor =
 				navbar.Color.BackColor =
 				base.BackColor;
