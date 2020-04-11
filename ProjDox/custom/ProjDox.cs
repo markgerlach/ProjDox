@@ -18,7 +18,7 @@ using System.Xml.Serialization;
 
 namespace mgCustom
 {
-	public class _BaseWinProjectSerializer
+	public class ProjDox
 	{
 		/// <summary>
 		/// Serialize an object to a string
