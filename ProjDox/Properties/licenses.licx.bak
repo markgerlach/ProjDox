@@ -1,0 +1,8 @@
+DevExpress.XtraReports.UserDesigner.XRDesignBarManager, DevExpress.XtraReports.v17.1.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraCharts.ChartControl, DevExpress.XtraCharts.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraTreeList.TreeList, DevExpress.XtraTreeList.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraReports.UserDesigner.XRDesignDockManager, DevExpress.XtraReports.v17.1.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraNavBar.NavBarControl, DevExpress.XtraNavBar.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

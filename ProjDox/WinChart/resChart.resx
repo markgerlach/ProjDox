@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="box_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoAnnotationLayout_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoAnnotationLayout.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoArea3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoArea3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoAreaStacked3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoAreaStacked3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoAreaStackedFull3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoAreaStackedFull3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoAreaStackedFull_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoAreaStackedFull.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoAreaStacked_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoAreaStacked.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoAreas_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoAreas.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBarAndArea3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBarAndArea3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBarAndLine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBarAndLine.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBarSideBySide3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBarSideBySide3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBarSideBySide_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBarSideBySide.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBarStacked3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBarStacked3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBarStackedFull3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBarStackedFull3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBarStackedFull_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBarStackedFull.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBarStacked_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBarStacked.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoBubble_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoBubble.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoCandleStick_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoCandleStick.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoChartTitles_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoChartTitles.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoCustomDrawAxisLabels_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoCustomDrawAxisLabels.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoCustomDrawLegend_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoCustomDrawLegend.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoCustomDrawSeriesPoints_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoCustomDrawSeriesPoints.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDataBindingChart_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDataBindingChart.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDataBindingSeries_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDataBindingSeries.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDataBindingTag_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDataBindingTag.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDateTimeGridAlignment_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDateTimeGridAlignment.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDateTimeMeasureUnits_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDateTimeMeasureUnits.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDateTimeScaleMode_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDateTimeScaleMode.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDiagramToPoint_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDiagramToPoint.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDisplayPatterns_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDisplayPatterns.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDoughnut3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDoughnut3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDoughnut_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDoughnut.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoDrillDown_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoDrillDown.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoEmptyPoints_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoEmptyPoints.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoFibonacciIndicators_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoFibonacciIndicators.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoFunnel3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoFunnel3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoFunnel_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoFunnel.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoGantt_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoGantt.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoHitTesting_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoHitTesting.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoHorizontalPanes_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoHorizontalPanes.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoImageAnnotation_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoImageAnnotation.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoLargeDataSource_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoLargeDataSource.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoLegendLikeTable_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoLegendLikeTable.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoLine3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoLine3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoLine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoLine.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoLogarithmicScale_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoLogarithmicScale.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoManhattanBar_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoManhattanBar.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoMovingAverage_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoMovingAverage.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoPie3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoPie3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoPie_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoPie.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoPoint_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoPoint.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoPolarArea_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoPolarArea.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoPolarLine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoPolarLine.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoPolarPoint_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoPolarPoint.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoRadarArea_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoRadarArea.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoRadarDiagramToPoint_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoRadarDiagramToPoint.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoRadarLine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoRadarLine.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoRadarPoint_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoRadarPoint.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoRangeBar_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoRangeBar.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoRealtimeChart_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoRealtimeChart.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoRegressionLine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoRegressionLine.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoResolveOverlappingLine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoResolveOverlappingLine.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoResolveOverlappingPie3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoResolveOverlappingPie3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoScaleBreaks_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoScaleBreaks.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoScatterLine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoScatterLine.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoScrollingAndZooming_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoScrollingAndZooming.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSecondaryAxes_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSecondaryAxes.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSeriesTitles_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSeriesTitles.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSideBySideBarStacked3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSideBySideBarStacked3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSideBySideBarStackedFull3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSideBySideBarStackedFull3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSideBySideBarStackedFull_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSideBySideBarStackedFull.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSideBySideBarStacked_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSideBySideBarStacked.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSideBySideGantt_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSideBySideGantt.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSideBySideRangeBar_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSideBySideRangeBar.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSpline3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSpline3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSplineArea3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSplineArea3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSplineAreaStacked3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSplineAreaStacked3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSplineAreaStackedFull3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSplineAreaStackedFull3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSplineAreaStackedFull_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSplineAreaStackedFull.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSplineAreaStacked_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSplineAreaStacked.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSplineArea_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSplineArea.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSpline_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSpline.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoStepLine3D_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoStepLine3D.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoStepLine_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoStepLine.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoStock_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoStock.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoSummarization_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoSummarization.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoTextAnnotation_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoTextAnnotation.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoTopNOptions_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoTopNOptions.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoTrendlines_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoTrendlines.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ChartDemoVerticalPanes_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChartDemoVerticalPanes.Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
