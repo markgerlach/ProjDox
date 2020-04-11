@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjDox", "ProjDox\ProjDox.csproj", "{D98B0090-8F56-4184-A3C7-57075218BEC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_BaseWinProjSingleControl", "_BaseWinProjSingleControl\_BaseWinProjSingleControl.csproj", "{D98B0090-8F56-4184-A3C7-57075218BEC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
