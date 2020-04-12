@@ -202,3 +202,6 @@ D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.csproj.CopyComplete
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.exe
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.pdb
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.csprojAssemblyReference.cache
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.res16x16.resources
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.res24x24.resources
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.res32x32.resources

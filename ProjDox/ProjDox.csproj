@@ -380,5 +380,23 @@
   <ItemGroup>
     <None Include="Resources\Search_03_24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Open_02_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Item_Open_01_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_3_24_ent_vl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_Web_3_24_ent_vl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_open2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
