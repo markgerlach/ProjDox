@@ -188,6 +188,12 @@
     <Compile Include="custom\SystemUpdates.cs" />
     <Compile Include="custom\UserInterface.cs" />
     <Compile Include="custom\Utils.cs" />
+    <Compile Include="frmChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChild.Designer.cs">
+      <DependentUpon>frmChild.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDialogErrorView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +311,9 @@
       <DependentUpon>mgGradientLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\mgTooltipResources.resx" />
+    <EmbeddedResource Include="frmChild.resx">
+      <DependentUpon>frmChild.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDialogErrorView.resx">
       <DependentUpon>frmDialogErrorView.cs</DependentUpon>
     </EmbeddedResource>

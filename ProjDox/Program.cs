@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _BaseWinProjSingleControl
+namespace ProjDox
 {
 	static class Program
 	{
@@ -16,7 +16,8 @@ namespace _BaseWinProjSingleControl
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new frmMain());
+			//Application.Run(new frmMain());
+			Application.Run(new frmChild());
 		}
 	}
 }
