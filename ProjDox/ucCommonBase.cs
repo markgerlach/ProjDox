@@ -11,7 +11,7 @@ using DevExpress.Utils.Controls;
 
 using mgCustom;
 
-namespace _BaseWinProjSingleControl
+namespace ProjDox
 {
 	public partial class ucCommonBase : UserControl, I_BaseWinProjectDisposeObjects, I_BaseWinProjectHelpAccessible, IXtraResizableControl
 	{

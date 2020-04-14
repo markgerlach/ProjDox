@@ -2022,7 +2022,7 @@ namespace mgWinChart.usercontrols
                 KeyValuePair<string, string> cellArgument = new KeyValuePair<string, string>(string.Empty, string.Empty);
                 string dateFormat = string.Empty;
                 List<int> weights = new List<int>(new int[] { 0, 0 });
-                int weightsIndex = 0;
+                //int weightsIndex = 0;
 
                 foreach (WinChartSeries series in this.Series)
                 {
@@ -2036,14 +2036,14 @@ namespace mgWinChart.usercontrols
                         }
                         currentTable = secondaryTable;
                         currentArguments = secondaryArguments;
-                        weightsIndex = 1;
+                        //weightsIndex = 1;
                         dateFormat = this.ExtractDateFormat(this.SecondaryAxisX);
                     }
                     else
                     {
                         currentTable = primaryTable;
                         currentArguments = primaryArguments;
-                        weightsIndex = 2;
+                        //weightsIndex = 2;
 
                         dateFormat = this.ExtractDateFormat(this.PrimaryAxisX);
                     }
@@ -3217,7 +3217,8 @@ namespace mgWinChart.usercontrols
                     // Do nothing.
                 }
             }
-            catch (System.ArgumentException error)
+            //catch (System.ArgumentException error)
+            catch 
             {
 #if DEBUG_EVAN
                 Console.WriteLine("Error from barSeriesLabelPosition_EditValueChanged: '{0}'", error.Message);
@@ -3885,7 +3886,8 @@ namespace mgWinChart.usercontrols
                             series.ChangeView(ChartType);
                         }
                     }
-                    catch (ArgumentException argex)
+                    //catch (ArgumentException argex)
+                    catch 
                     {
                         // The data source isn't sufficient to plot this type of chart.
                         // Hold onto the bad view type for reporting, and make sure both ViewType and _oldViewType are the most recent safe type.
@@ -4530,7 +4532,7 @@ namespace mgWinChart.usercontrols
                             series.ChangeView(ChartType);
                         }
                     }
-                    catch (ArgumentException argex)
+                    catch 
                     {
                         // The data source isn't sufficient to plot this type of chart.
                         // Hold onto the bad view type for reporting, and make sure both ViewType and _oldViewType are the most recent safe type.
@@ -5237,8 +5239,15 @@ namespace mgWinChart.usercontrols
             //    }
             //}
 
-            ((XYDiagram)this.chartMain.Diagram).AxisX.Range.Auto = true;
-            this.SecondaryAxisX.Range.Auto = true;
+            //((XYDiagram)this.chartMain.Diagram).AxisX.Range.Auto = true;
+            //this.SecondaryAxisX.Range.Auto = true;
+
+            ((XYDiagram)this.chartMain.Diagram).AxisX.VisualRange.Auto =
+                ((XYDiagram)this.chartMain.Diagram).AxisX.WholeRange.Auto =
+                true;
+            this.SecondaryAxisX.VisualRange.Auto =
+                this.SecondaryAxisX.WholeRange.Auto =
+                true;
         }
 
         /// <summary>
@@ -5278,8 +5287,11 @@ namespace mgWinChart.usercontrols
             }
             else
             {
-                ((XYDiagram)this.chartMain.Diagram).AxisY.Range.Auto = true;
-                this.SecondaryAxisY.Range.Auto = true;
+                //((XYDiagram)this.chartMain.Diagram).AxisY.Range.Auto = true;
+                //this.SecondaryAxisY.Range.Auto = true;
+
+                ((XYDiagram)this.chartMain.Diagram).AxisY.VisualRange.Auto = true;
+                this.SecondaryAxisY.VisualRange.Auto = true;
             }
         }
 
@@ -5402,8 +5414,11 @@ namespace mgWinChart.usercontrols
             double scaleMaxSecondary = (scale * (scaleMax - matchingValue)) + matchingValue;
 
             // Set the values on the Axes
-            ((XYDiagram)this.chartMain.Diagram).AxisY.Range.SetInternalMinMaxValues(scaleMin, scaleMax);
-            this.SecondaryAxisY.Range.SetInternalMinMaxValues(scaleMinSecondary, scaleMaxSecondary);
+            //((XYDiagram)this.chartMain.Diagram).AxisY.Range.SetInternalMinMaxValues(scaleMin, scaleMax);
+            //this.SecondaryAxisY.Range.SetInternalMinMaxValues(scaleMinSecondary, scaleMaxSecondary);
+
+            ((XYDiagram)this.chartMain.Diagram).AxisY.VisualRange.SetMinMaxValues(scaleMin, scaleMax);
+            this.SecondaryAxisY.VisualRange.SetMinMaxValues(scaleMinSecondary, scaleMaxSecondary);
         }
 
         /// <summary>
@@ -5467,31 +5482,22 @@ namespace mgWinChart.usercontrols
             {
                 case DateTimeFormat.Custom:
                     return axis.DateTimeOptions.FormatString;
-                    break;
                 case DateTimeFormat.General:
                     return string.Format("{0} {1}", currentInfo.ShortDatePattern, currentInfo.ShortTimePattern);
-                    break;
                 case DateTimeFormat.LongDate:
                     return currentInfo.LongDatePattern;
-                    break;
                 case DateTimeFormat.LongTime:
                     return currentInfo.LongTimePattern;
-                    break;
                 case DateTimeFormat.MonthAndDay:
                     return currentInfo.MonthDayPattern;
-                    break;
                 case DateTimeFormat.MonthAndYear:
                     return currentInfo.YearMonthPattern;
-                    break;
                 case DateTimeFormat.QuarterAndYear:
                     return "QQ yyyy";
-                    break;
                 case DateTimeFormat.ShortDate:
                     return currentInfo.ShortDatePattern;
-                    break;
                 case DateTimeFormat.ShortTime:
                     return currentInfo.ShortTimePattern;
-                    break;
                 default:
                     return "yyyy-MM-dd";
             }

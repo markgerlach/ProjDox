@@ -71,25 +71,25 @@ namespace mgControls
 			this.ToolTip = "Sort Order: " + _currentState.ToString();
 
 			// Depending on the state, attempt to change the image
-			try
-			{
-				switch (_currentState)
-				{
-					//case mgDevX_SortButtonState.None:
-					//    this.Image = global::<projectName>.Properties.Resources.Symbol_Cancel_Green_01_16;
-					//    break;
-					//case mgDevX_SortButtonState.Ascending:
-					//    this.Image = global::<projectName>.Properties.Resources.Sort_Ascending_02_16;
-					//    break;
-					//case mgDevX_SortButtonState.Descending:
-					//    this.Image = global::<projectName>.Properties.Resources.Sort_Descending_02_16;
-					//    break;
-				}
-			}
-			catch
-			{
-				// Don't do anything here
-			}
+			//try
+			//{
+			//	switch (_currentState)
+			//	{
+			//		//case mgDevX_SortButtonState.None:
+			//		//    this.Image = global::<projectName>.Properties.Resources.Symbol_Cancel_Green_01_16;
+			//		//    break;
+			//		//case mgDevX_SortButtonState.Ascending:
+			//		//    this.Image = global::<projectName>.Properties.Resources.Sort_Ascending_02_16;
+			//		//    break;
+			//		//case mgDevX_SortButtonState.Descending:
+			//		//    this.Image = global::<projectName>.Properties.Resources.Sort_Descending_02_16;
+			//		//    break;
+			//	}
+			//}
+			//catch
+			//{
+			//	// Don't do anything here
+			//}
 		}
 
 		/// <summary>

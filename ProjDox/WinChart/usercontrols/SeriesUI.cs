@@ -339,7 +339,7 @@ namespace mgWinChart.usercontrols
                     cboBarShape.SelectedItem = "default";
                     return;
                 }
-                if (cboBarShape.SelectedItem == "default")
+                if (cboBarShape.SelectedItem.ToString().ToLower().Equals(cboBarShape.SelectedItem))
                 {
                     ((Bar3DSeriesView)Series.View).Model = ParentChart.ModelType;
                 }
@@ -354,22 +354,25 @@ namespace mgWinChart.usercontrols
         /// </summary>
         protected override void UpdateBarPosition()
         {
-            if (Series != null && Series.Label is BarSeriesLabel)
+            if (Series != null && 
+                Series.Label is BarSeriesLabel)
             {
                 if (cboPosition.SelectedItem == null)
                 {
                     cboPosition.SelectedItem = "default";
                     return;
                 }
-                if (cboPosition.SelectedItem == "default")
-                {
-					//((BarSeriesLabel)Series.Label).Position = ParentChart.BarLabelPosition;
-                    return;
-                }
-                if (cboPosition.SelectedItem == "Top" && (Series.View is StackedBarSeriesView || Series.View is StackedBar3DSeriesView))
-                {
-                    cboPosition.SelectedItem = "Top Inside";
-                }
+     //           if (cboPosition.SelectedItem.ToString().ToLower().Trim().Contains("bottom"))
+     //           {
+					////((BarSeriesLabel)Series.Label).Position = ParentChart.BarLabelPosition;
+     //               return;
+     //           }
+     //           if (cboPosition.SelectedItem.ToString().ToLower().Trim().Equals("top") && 
+     //               (Series.View is   typeof(StackedBarSeriesView) || 
+     //               Series.View is StackedBar3DSeriesView))
+     //           {
+     //               cboPosition.SelectedItem = "Top Inside";
+     //           }
                 string cleanedString = ((string)cboPosition.SelectedItem).Replace(" ", "");
                 ((BarSeriesLabel)Series.Label).Position = GenericEnumConverter.ValueForString<BarSeriesLabelPosition>(cleanedString);
             }
@@ -386,15 +389,15 @@ namespace mgWinChart.usercontrols
                     cboPosition.SelectedItem = "default";
                     return;
                 }
-                if (cboPosition.SelectedItem == "default")
-                {
-                    ((PieSeriesLabel)Series.Label).Position = ParentChart.PieLabelPosition;
-                }
-                else
-                {
-                    string cleanedString = ((string)cboPosition.SelectedItem).Replace(" ", "");
-                    ((PieSeriesLabel)Series.Label).Position = GenericEnumConverter.ValueForString<PieSeriesLabelPosition>(cleanedString);
-                }
+                //if (cboPosition.SelectedItem == "default")
+                //{
+                //    ((PieSeriesLabel)Series.Label).Position = ParentChart.PieLabelPosition;
+                //}
+                //else
+                //{
+                //    string cleanedString = ((string)cboPosition.SelectedItem).Replace(" ", "");
+                //    ((PieSeriesLabel)Series.Label).Position = GenericEnumConverter.ValueForString<PieSeriesLabelPosition>(cleanedString);
+                //}
             }
         }
         /// <summary>

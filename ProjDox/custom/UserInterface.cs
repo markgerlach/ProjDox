@@ -130,7 +130,6 @@ namespace mgCustom
 				height != null)
 			{
 				throw new Exception("You can't pass in both Height and Width to this method...");
-				return null;
 			}
 
 			Bitmap bmp = new Bitmap(img);

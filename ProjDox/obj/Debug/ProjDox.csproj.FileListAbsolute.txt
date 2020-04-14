@@ -183,11 +183,7 @@ D:\source\repos\ProjDox\ProjDox\obj\Debug\mgControls.mgDevX_FilterControl.resour
 D:\source\repos\ProjDox\ProjDox\obj\Debug\mgControls.mgDevX_Label_Hyperlink.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\mgControls.mgGradientLabel.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.controls.mgTooltipResources.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\_BaseWinProjSingleControl.frmDialogErrorView.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\_BaseWinProjSingleControl.frm_BaseWinProjSingleControlBase.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.Properties.Resources.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\_BaseWinProjSingleControl.ucCommonBase.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\_BaseWinProjSingleControl.ucErrorView.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.WinChart.resChart.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\mgWinChart.Test_Forms.frmDevXChartTester.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\mgWinChart.usercontrols.GeneralUI.resources
@@ -206,3 +202,7 @@ D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.res24x24.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.res32x32.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frmChild.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frmMain.resources
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frmDialogErrorView.resources
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.ucCommonBase.resources
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.ucErrorView.resources
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frm_ProjDox.resources

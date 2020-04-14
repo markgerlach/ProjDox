@@ -16,7 +16,8 @@ namespace mgControls
 
 			// Set some of the skinning on the control
 			DevExpress.Skins.Skin currentSkin = null;
-			DevExpress.Skins.SkinElement element, elementBackground, emptyTextColor, filledTextColor;
+			//DevExpress.Skins.SkinElement element, elementBackground, emptyTextColor, filledTextColor;
+			DevExpress.Skins.SkinElement element, elementBackground;
 
 			DevExpress.LookAndFeel.DefaultLookAndFeel df = new DevExpress.LookAndFeel.DefaultLookAndFeel();
 			df.LookAndFeel.SkinName = "Black";

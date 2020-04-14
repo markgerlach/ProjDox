@@ -22,7 +22,7 @@ namespace mgControls
 		private DevExpress.XtraEditors.Controls.ImageSlider _imgSlider = null;
 		private string _defaultText = string.Empty;
 		private List<GridView> _gridViews = new List<GridView>();
-		private long _dbCount = -1;		// Find out what the DB Count is and include it in the text
+		//private long _dbCount = -1;		// Find out what the DB Count is and include it in the text
 
 		private string _dbCountText = "Rows In Database";
 		private string _loadedCountText = "Rows Loaded";

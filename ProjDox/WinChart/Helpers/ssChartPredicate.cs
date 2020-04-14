@@ -138,22 +138,16 @@ namespace mgWinChart.Helpers
                     {
                         case PredicateComparisonType.DoesNotEqual:
                             return !(doubleValue == _numericArgument);
-                            break;
                         case PredicateComparisonType.Equals:
                             return (doubleValue == _numericArgument);
-                            break;
                         case PredicateComparisonType.IsGreaterThan:
                             return (doubleValue > _numericArgument);
-                            break;
                         case PredicateComparisonType.IsGreaterThanOrEqualTo:
                             return (doubleValue >= _numericArgument);
-                            break;
                         case PredicateComparisonType.IsLessThan:
                             return (doubleValue < _numericArgument);
-                            break;
                         case PredicateComparisonType.IsLessThanOrEqualTo:
                             return (doubleValue <= _numericArgument);
-                            break;
                         case PredicateComparisonType.IsLike:
                             return (Convert.ToInt32(doubleValue) == Convert.ToInt32(_numericArgument));
                     }
@@ -177,25 +171,18 @@ namespace mgWinChart.Helpers
                     {
                         case PredicateComparisonType.DoesNotEqual:
                             return !(dateValue == _datetimeArgument);
-                            break;
                         case PredicateComparisonType.Equals:
                             return (dateValue == _datetimeArgument);
-                            break;
                         case PredicateComparisonType.IsGreaterThan:
                             return (dateValue > _datetimeArgument);
-                            break;
                         case PredicateComparisonType.IsGreaterThanOrEqualTo:
                             return (dateValue >= _datetimeArgument);
-                            break;
                         case PredicateComparisonType.IsLessThan:
                             return (dateValue < _datetimeArgument);
-                            break;
                         case PredicateComparisonType.IsLessThanOrEqualTo:
                             return (dateValue <= _datetimeArgument);
-                            break;
                         case PredicateComparisonType.IsLike:
                             return dateValue.ToShortDateString().Equals(_datetimeArgument.ToShortDateString());
-                            break;
                     }
                     break;
                 case PredicateArgumentType.String:
@@ -211,17 +198,14 @@ namespace mgWinChart.Helpers
                                 return (new PredicateComparisonType[] { PredicateComparisonType.DoesNotEqual, 
                                 PredicateComparisonType.IsLessThan, PredicateComparisonType.IsLessThanOrEqualTo }
                                     ).Contains(this.ComparisonType);
-                                break;
                             case 0:
                                 return (new PredicateComparisonType[] { PredicateComparisonType.Equals, 
                                 PredicateComparisonType.IsGreaterThanOrEqualTo, PredicateComparisonType.IsLessThanOrEqualTo  }
                                     ).Contains(this.ComparisonType);
-                                break;
                             case 1:
                                 return (new PredicateComparisonType[] { PredicateComparisonType.DoesNotEqual, 
                                 PredicateComparisonType.IsGreaterThan, PredicateComparisonType.IsGreaterThanOrEqualTo }
                                     ).Contains(this.ComparisonType);
-                                break;
                             default:
                                 break;
                         }
@@ -338,7 +322,6 @@ namespace mgWinChart.Helpers
                         }
                     }
                     return true;
-                    break;
                 case PredicateConjunction.NotAnd:
                     foreach (ssChartPredicate subpredicate in this.Subpredicates)
                     {
@@ -348,7 +331,6 @@ namespace mgWinChart.Helpers
                         }
                     }
                     return false;
-                    break;
                 case PredicateConjunction.NotOr:
                     foreach (ssChartPredicate subpredicate in this.Subpredicates)
                     {
@@ -358,7 +340,6 @@ namespace mgWinChart.Helpers
                         }
                     }
                     return true;
-                    break;
                 case PredicateConjunction.Or:
                     foreach (ssChartPredicate subpredicate in this.Subpredicates)
                     {
@@ -368,7 +349,6 @@ namespace mgWinChart.Helpers
                         }
                     }
                     return false;
-                    break;
                 default:
                     return false;
             }

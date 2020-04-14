@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ProjDox
 {
-    public partial class frmChild : _BaseWinProjSingleControl.frm_BaseWinProjSingleControlBase
+    public partial class frmChild : frm_ProjDox
     {
         public frmChild()
         {

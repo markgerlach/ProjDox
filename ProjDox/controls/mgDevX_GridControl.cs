@@ -59,7 +59,7 @@ namespace mgControls
 		private bool _checkUncheckByClickingColumnHeader = true;
 
 		private ToolTipController _toolTipController = new ToolTipController();
-		private bool _hintShowing = false;
+		//private bool _hintShowing = false;
 		private Size? _customizationFormSize = null;
 		private string _defaultGroupFormat = "{0}: [#image]{1} {2}";
 		private List<string> _disabledLinkColumns = new List<string>();
@@ -114,33 +114,6 @@ namespace mgControls
 			_toolTipController.CustomDraw += new ToolTipControllerCustomDrawEventHandler(_toolTipController_CustomDraw);
 
 			this.ShowOnlyPredefinedDetails = true;		// Show only pre-defined details in the grid
-			
-			// Load the images for the link types from the resources collection
-			//if (!String.IsNullOrEmpty(Utils.NavBarImagesLibraryFile))
-			//{
-			//    _imageLibrary.Add(GridLinkType.Add, Utils.GetImageFromAssemblyDLLAndResourcePath(Utils.NavBarImagesLibraryFile, "add2.png"));
-			//    _imageLibrary.Add(GridLinkType.Delete, Utils.GetImageFromAssemblyDLLAndResourcePath(Utils.NavBarImagesLibraryFile, "delete2.png"));
-			//    _imageLibrary.Add(GridLinkType.Edit, Utils.GetImageFromAssemblyDLLAndResourcePath(Utils.NavBarImagesLibraryFile, "pencil.png"));
-			//    _imageLibrary.Add(GridLinkType.Print, Utils.GetImageFromAssemblyDLLAndResourcePath(Utils.NavBarImagesLibraryFile, "printer.png"));
-			//}
-
-			//_imageLibrary.Add(GridLinkType.Add, global::mgCommon.res16x16.add2);
-			//_imageLibrary.Add(GridLinkType.Delete, global::_BaseWinProject.Win.Common.res16x16.delete2);
-			//_imageLibrary.Add(GridLinkType.Edit, global::_BaseWinProject.Win.Common.res16x16.pencil);
-			//_imageLibrary.Add(GridLinkType.Print, global::_BaseWinProject.Win.Common.res16x16.printer);
-
-			// Set the grouping on init of the control
-			//if (!_allowGrouping)
-			//{
-			//    if (this.GridView != null)
-			//    {
-			//        ((GridView)this.GridView).OptionsView.ShowGroupPanel = _allowGrouping;
-			//        ((GridView)this.GridView).OptionsCustomization.AllowGroup = _allowGrouping;
-			//    }
-			//}
-
-			//this.ViewRegistered += new ViewOperationEventHandler(mgDevX_GridControl_ViewRegistered);
-			//this.ViewRemoved += new ViewOperationEventHandler(mgDevX_GridControl_ViewRemoved);
 		}
 
 		/// <summary>
@@ -552,7 +525,7 @@ namespace mgControls
 						}
 						catch
 						{
-							int test = 1;
+							//int test = 1;
 						}
 					}
 				}
@@ -1178,7 +1151,7 @@ namespace mgControls
 					}
 				}
 			}
-			catch (Exception ex)
+			catch 
 			{
 			}
 		}
@@ -2101,7 +2074,7 @@ namespace mgControls
 			{
 				Rectangle r = e.Bounds;
 				int totalWidth = 16;
-				int imageWidth = 15;
+				//int imageWidth = 15;
 
 				// MG - Leave the row below blanked
 				// If you want to draw things in the cell, copy the code from this method into your form
@@ -2115,7 +2088,7 @@ namespace mgControls
 
 				if (link.LinkImage != null)
 				{
-					imageWidth = 15;
+					//imageWidth = 15;
 					Image img = new Bitmap(link.LinkImage, 15, 15);
 					Rectangle imgRect = new Rectangle(), imgRectCrop = new Rectangle();
 					if (totalWidth < r.Width)
@@ -2134,10 +2107,10 @@ namespace mgControls
 					if (mgCustom.Utils.ListContainsString(_disabledLinkColumns, e.Column.FieldName)) { img = UserInterface.GetGrayscaleImage(img); }
 					e.Graphics.DrawImage(img, imgRect, imgRectCrop, GraphicsUnit.Pixel);
 				}
-				else
-				{
-					imageWidth = 0;
-				}
+				//else
+				//{
+				//	imageWidth = 0;
+				//}
 
 				// Draw the text
 				if (totalWidth < r.Width)
@@ -2942,9 +2915,8 @@ namespace mgControls
 
 					//((LayoutView)view).TemplateCard.AddItem(lci);
 				}
-				catch (Exception ex)
+				catch
 				{
-					int test = 1;
 				}
 			}
 		}
@@ -2952,7 +2924,7 @@ namespace mgControls
 		private void newButton_Click(object sender, EventArgs e)
 		{
 			// Implement the click for the button
-			int test = 1;
+			//int test = 1;
 			//this.OnGridButtonClicked(
 		}
 		#endregion Buttons
@@ -4230,7 +4202,7 @@ namespace mgControls
 			if (view is GridView)
 			{
 				// Show the columns in the list
-				int count = 0;
+				//int count = 0;
 				bool exists = false;
 				for (int i = 0; i < columns.Length; i++)
 				{

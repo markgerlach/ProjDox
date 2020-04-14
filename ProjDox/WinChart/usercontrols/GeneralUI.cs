@@ -112,7 +112,8 @@ namespace mgWinChart.usercontrols
             set
             {
                 string valueString = GenericEnumConverter.StringForValue<Bar3DModel>(value);
-                if (valueString != cboBarShape.SelectedItem && cboBarShape.Items.Contains(valueString))
+                if (valueString != cboBarShape.SelectedItem.ToString() && 
+                    cboBarShape.Items.Contains(valueString))
                 {
                     cboBarShape.SelectedItem = valueString;
                 }

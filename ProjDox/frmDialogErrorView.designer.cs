@@ -1,4 +1,4 @@
-namespace _BaseWinProjSingleControl
+namespace ProjDox
 {
 	partial class frmDialogErrorView
 	{
@@ -33,7 +33,7 @@ namespace _BaseWinProjSingleControl
             this.layoutMain = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ilErrors = new System.Windows.Forms.ImageList(this.components);
-			this.ucErrorView = new _BaseWinProjSingleControl.ucErrorView();
+			this.ucErrorView = new ucErrorView();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutMain)).BeginInit();
             this.layoutMain.SuspendLayout();
@@ -110,9 +110,9 @@ namespace _BaseWinProjSingleControl
             this.ucErrorView.UserDef1Image = null;
             this.ucErrorView.UserDef2Image = null;
             this.ucErrorView.UserDef3Image = null;
-            this.ucErrorView.CancelProcessing += new _BaseWinProjSingleControl.ucErrorView.CancelProcessingEventHandler(this.ucErrorView_CancelProcessing);
-			this.ucErrorView.ControlClosed += new _BaseWinProjSingleControl.ucErrorView.ControlClosedEventHandler(this.ucErrorView_ControlClosed);
-			this.ucErrorView.ContinueProcessing += new _BaseWinProjSingleControl.ucErrorView.ContinueProcessingEventHandler(this.ucErrorView_ContinueProcessing);
+            this.ucErrorView.CancelProcessing += new ucErrorView.CancelProcessingEventHandler(this.ucErrorView_CancelProcessing);
+			this.ucErrorView.ControlClosed += new ucErrorView.ControlClosedEventHandler(this.ucErrorView_ControlClosed);
+			this.ucErrorView.ContinueProcessing += new ucErrorView.ContinueProcessingEventHandler(this.ucErrorView_ContinueProcessing);
             // 
             // layoutControlItem1
             // 
@@ -152,7 +152,7 @@ namespace _BaseWinProjSingleControl
 		private DevExpress.XtraLayout.LayoutControl layoutMain;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
 		private System.Windows.Forms.ImageList ilErrors;
-		private _BaseWinProjSingleControl.ucErrorView ucErrorView;
+		private ucErrorView ucErrorView;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
 	}
 }

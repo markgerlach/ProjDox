@@ -8,6 +8,7 @@ using System.IO;
 using System.Windows.Forms;
 
 using mgModel;
+using ProjDox;
 
 namespace mgCustom
 {
@@ -249,7 +250,8 @@ namespace mgCustom
 
 			ClassGenExceptionCollection errors = new ClassGenExceptionCollection();
 			errors.Add(error);
-			_BaseWinProjSingleControl.frmDialogErrorView frm = new _BaseWinProjSingleControl.frmDialogErrorView(errors);
+			frmDialogErrorView frm = new frmDialogErrorView(errors);
+
 			if (errors.CriticalExceptionCount == 0) { frm.ContinuableForm = true; }
 			if (frm.ShowDialog() == DialogResult.Cancel)
 			{

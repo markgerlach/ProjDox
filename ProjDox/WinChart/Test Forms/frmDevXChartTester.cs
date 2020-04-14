@@ -9,10 +9,11 @@ using System.Windows.Forms;
 using DevExpress.XtraCharts;
 
 using mgWinChart.Helpers;
+using ProjDox;
 
 namespace mgWinChart.Test_Forms
 {
-    public partial class frmDevXChartTester : _BaseWinProjSingleControl.frm_BaseWinProjSingleControlBase
+    public partial class frmDevXChartTester : frm_ProjDox
 	{
         public frmDevXChartTester()
         {

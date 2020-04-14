@@ -1,4 +1,4 @@
-namespace _BaseWinProjSingleControl
+namespace ProjDox
 {
 	partial class ucCommonBase
 	{

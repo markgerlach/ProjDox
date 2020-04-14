@@ -131,7 +131,7 @@ namespace mgCustom
 			}
 
 			// Get the actual value, putting space in
-			bool prevLetterCapped = false, nextLetterCapped = false;
+			//bool prevLetterCapped = false, nextLetterCapped = false;
 			for (int i = 0; i < workingVar.Length; i++)
 			{
 				if ("abcdefghijklmnopqrstuvwxyz".IndexOf(workingVar.Substring(i, 1)) > -1)
@@ -422,7 +422,7 @@ namespace mgCustom
 					}
 				}
 			}
-			catch (Exception ex)
+			catch
 			{
 
 			}
@@ -563,7 +563,7 @@ namespace mgCustom
 				}
 				
 			}
-			catch (Exception ex)
+			catch 
 			{
 				// Reset the times
 				zuluTime =
@@ -901,7 +901,7 @@ namespace mgCustom
 					(double.Parse(ipOctets[2]) * 256) +
 					double.Parse(ipOctets[3]));
 			}
-			catch (Exception ex)
+			catch 
 			{
 			}
 			return ipValue;

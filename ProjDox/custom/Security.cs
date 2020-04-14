@@ -49,7 +49,7 @@ namespace mgCustom
 		//public static Search_User CurrentUser = new Search_User();
 
 		private static string _password = "13FC1A64EBAC4089A98330AD4314725D";
-		private static string _fieldEncSupportListName = "SecurityEncryptedField";
+		//private static string _fieldEncSupportListName = "SecurityEncryptedField";
 		#endregion
 
 		#region constructors

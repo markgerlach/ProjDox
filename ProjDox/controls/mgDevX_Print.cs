@@ -230,7 +230,7 @@ namespace mgControls
 					XRTableRow row2 = new XRTableRow();
 
 					// Set the style
-					TextAlignment alignment = TextAlignment.TopLeft;
+					//TextAlignment alignment = TextAlignment.TopLeft;
 					XRControlStyle oddStyle = new XRControlStyle();
 					oddStyle.Name = "OddStyleGrid";
 					oddStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));

@@ -13,12 +13,12 @@ using mgControls;
 using mgCustom;
 using mgModel;
 
-namespace _BaseWinProjSingleControl
+namespace ProjDox
 {
 	/// <summary>
 	/// Summary description for frmLEADBase.
 	/// </summary>
-	public class frm_BaseWinProjSingleControlBase : System.Windows.Forms.Form, I_BaseWinProjectHelpAccessible
+	public class frm_ProjDox : System.Windows.Forms.Form, I_BaseWinProjectHelpAccessible
 	{
 		//private string _screenName = string.Empty;
 		private string _subControlName = string.Empty;
@@ -29,7 +29,7 @@ namespace _BaseWinProjSingleControl
 		private bool _askBeforeClosing = true;
 		protected mgGradientLabel ucGrLbl;
 		//public ReportingCollection rpts = null;
-		public frm_BaseWinProjSingleControlBase _callingForm = null;
+		public frm_ProjDox _callingForm = null;
 		//protected System.Windows.Forms.ToolTip tips;
 		protected mgTooltip tips;
 		private System.ComponentModel.IContainer components;
@@ -63,7 +63,7 @@ namespace _BaseWinProjSingleControl
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		public frm_BaseWinProjSingleControlBase()
+		public frm_ProjDox()
 		{
 			InitializeComponent();
 //			this._guid = Guid.NewGuid();
@@ -101,7 +101,7 @@ namespace _BaseWinProjSingleControl
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BaseWinProjSingleControlBase));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ProjDox));
 			this.ucGrLbl = new mgControls.mgGradientLabel();
 			this.tips = new mgControls.mgTooltip(this.components);
 			this.SuspendLayout();
@@ -534,7 +534,7 @@ namespace _BaseWinProjSingleControl
 		/// <summary>
 		/// The form instance that called this form
 		/// </summary>
-		public frm_BaseWinProjSingleControlBase CallingForm
+		public frm_ProjDox CallingForm
 		{
 			get { return _callingForm; }
 			set { _callingForm = value; }
@@ -1060,7 +1060,7 @@ namespace _BaseWinProjSingleControl
 					DialogResult.Yes)
 				{
 					string sql = string.Empty;
-					int recsAffected = 0;
+					//int recsAffected = 0;
 			
 					try
 					{
@@ -1126,10 +1126,10 @@ namespace _BaseWinProjSingleControl
 				{
 					this.Close();
 				}
-				catch (InvalidOperationException invOpException)
-				{
-					// Don't do anything
-				}
+				//catch (InvalidOperationException invOpException)
+				//{
+				//	// Don't do anything
+				//}
 				catch (Exception ex)
 				{
 					throw ex;

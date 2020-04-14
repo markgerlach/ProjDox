@@ -24,7 +24,7 @@ using DevExpress.XtraPrinting;
 using mgCustom;
 using mgModel;
 
-namespace _BaseWinProjSingleControl
+namespace ProjDox
 {
 	public partial class ucErrorView : ucCommonBase
 	{

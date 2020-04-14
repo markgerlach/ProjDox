@@ -23,9 +23,9 @@ using DevExpress.XtraPrinting;
 
 using mgModel;
 
-namespace _BaseWinProjSingleControl
+namespace ProjDox
 {
-    public partial class frmDialogErrorView : frm_BaseWinProjSingleControlBase
+    public partial class frmDialogErrorView : frm_ProjDox
 	{
 		private ClassGenExceptionCollection _coll = new ClassGenExceptionCollection();
 

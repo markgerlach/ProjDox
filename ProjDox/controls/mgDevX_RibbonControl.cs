@@ -210,7 +210,7 @@ namespace mgControls
 			mgDevX_RibbonControlBarItemCollection buttonArray = GetBarButtonItems();
 			BarItemLink btnItem = null;
 
-			int targetItem = -1;
+			//int targetItem = -1;
 			foreach (mgDevX_RibbonControlBarItem kvp in buttonArray)
 			{
 				if (((BarButtonItem)kvp.BarItemLink.Item).Down &&
