@@ -111,7 +111,7 @@ namespace ProjDox
 
 		#region IXtraResizableControl Members
 
-		public event EventHandler Changed;
+		public event PropertyChangedEventHandler PropertyChanged;
 
 		public bool IsCaptionVisible
 		{

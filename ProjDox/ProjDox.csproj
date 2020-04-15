@@ -407,5 +407,8 @@
   <ItemGroup>
     <None Include="Resources\book_open2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

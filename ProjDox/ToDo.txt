@@ -1,0 +1,9 @@
+﻿This is a list of items for the File browsing to do list
+
+   Get all warnings addressed
+   Generate files/folders for project organization
+   Get documents together for sample views/functions within the program
+
+
+
+   
