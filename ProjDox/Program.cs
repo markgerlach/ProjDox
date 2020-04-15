@@ -16,8 +16,8 @@ namespace ProjDox
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			//Application.Run(new frmMain());
-			Application.Run(new frmChild());
+			Application.Run(new frmMain());
+			//Application.Run(new frmChild());
 		}
 	}
 }
