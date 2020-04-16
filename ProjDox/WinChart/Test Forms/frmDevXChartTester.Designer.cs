@@ -105,7 +105,7 @@
             // 
             // mgLayoutControl1
             // 
-            this.mgLayoutControl1.AllowCustomizationMenu = false;
+            //this.mgLayoutControl1.AllowCustomizationMenu = false;
             this.mgLayoutControl1.BackColor = System.Drawing.Color.White;
             this.mgLayoutControl1.Controls.Add(this.chart);
             this.mgLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,16 +119,15 @@
             // 
             // chart
             // 
-            xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram1.AxisX.Range.SideMarginsEnabled = true;
+            //xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
+            //xyDiagram1.AxisX.Range.SideMarginsEnabled = true;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram1.AxisY.Range.SideMarginsEnabled = true;
+            //xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
+            //xyDiagram1.AxisY.Range.SideMarginsEnabled = true;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chart.Diagram = xyDiagram1;
             this.chart.Location = new System.Drawing.Point(5, 5);
             this.chart.Name = "chart";
-            sideBySideBarSeriesLabel1.LineVisible = true;
             series1.Label = sideBySideBarSeriesLabel1;
             series1.Name = "Percentage Points";
             series1.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
@@ -138,7 +137,6 @@
             seriesPoint4,
             seriesPoint5,
             seriesPoint6});
-            pointSeriesLabel1.LineVisible = true;
             series2.Label = pointSeriesLabel1;
             series2.Name = "2005";
             series2.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
@@ -150,7 +148,7 @@
             seriesPoint12,
             seriesPoint13});
             series2.View = lineSeriesView1;
-            pointSeriesLabel2.LineVisible = true;
+            //pointSeriesLabel2.LineVisible = true;
             series3.Label = pointSeriesLabel2;
             series3.Name = "2010";
             series3.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
@@ -164,7 +162,7 @@
         series1,
         series2,
         series3};
-            pointSeriesLabel3.LineVisible = true;
+            //pointSeriesLabel3.LineVisible = true;
             this.chart.SeriesTemplate.Label = pointSeriesLabel3;
             this.chart.SeriesTemplate.View = lineSeriesView3;
             this.chart.Size = new System.Drawing.Size(823, 442);

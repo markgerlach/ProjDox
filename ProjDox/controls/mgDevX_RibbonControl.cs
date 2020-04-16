@@ -5,6 +5,7 @@ using System.Text;
 using DevExpress.XtraLayout.Utils;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using System.Windows.Forms;
 
 namespace mgControls
 {
@@ -54,7 +55,8 @@ namespace mgControls
 						{
 							for (int i = 0; i < group.ItemLinks.Count; i++)
 							{
-								if (group.ItemLinks[i] is BarButtonItem)
+								//if (group.ItemLinks[i] is BarButtonItem)
+								if (typeof(List<object>).IsAssignableFrom(typeof(BarButtonItem)))
 								{
 									buttonCount++;
 								}
@@ -65,7 +67,8 @@ namespace mgControls
 						{
 							for (int i = 0; i < group.ItemLinks.Count; i++)
 							{
-								if (group.ItemLinks[i] is BarButtonItem)
+								//if (group.ItemLinks[i] is BarButtonItem)
+								if (typeof(List<object>).IsAssignableFrom(typeof(BarButtonItem))) 
 								{
 									((BarButtonItem)group.ItemLinks[i].Item).LargeWidth = buttonWidth;
 								}
@@ -124,7 +127,8 @@ namespace mgControls
 						{
 							for (int i = 0; i < group.ItemLinks.Count; i++)
 							{
-								if (group.ItemLinks[i] is BarButtonItem)
+								//if (group.ItemLinks[i] is BarButtonItem)
+								if (typeof(List<object>).IsAssignableFrom(typeof(BarButtonItem))) 
 								{
 									((BarButtonItem)group.ItemLinks[i].Item).Down = false;
 								}

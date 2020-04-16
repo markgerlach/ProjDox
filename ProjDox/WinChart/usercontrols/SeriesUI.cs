@@ -42,7 +42,7 @@ namespace mgWinChart.usercontrols
                         cboSeriesSource.SelectedItem = Series.Name;
                     }
 
-                    LabelsChecked = Series.Label.Visible;
+                    //LabelsChecked = Series.Label.Visible;
                 }
             }
         }
@@ -276,7 +276,8 @@ namespace mgWinChart.usercontrols
         }
         private void chkLabelsVisible_CheckedChanged(object sender, EventArgs e)
         {
-            Series.Label.Visible = LabelsChecked;
+            //Series.Label.Visible = LabelChecked;
+            //Series.Label.LineVisibility = (LabelsChecked ? DevExpress.Utils.DefaultBoolean : false);
         }
         private void cboPosition_SelectedIndexChanged(object sender, EventArgs e)
         {

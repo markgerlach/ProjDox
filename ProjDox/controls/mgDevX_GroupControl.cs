@@ -24,7 +24,7 @@ namespace mgControls
 
 		#region IXtraResizableControl Members
 
-		public event EventHandler Changed;
+		public event EventHandler SizeChanged;
 
 		public bool IsCaptionVisible
 		{

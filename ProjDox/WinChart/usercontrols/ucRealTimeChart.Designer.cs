@@ -64,7 +64,7 @@
             // 
             // layoutcontrolMain
             // 
-            this.layoutcontrolMain.AllowCustomizationMenu = false;
+            //this.layoutcontrolMain.AllowCustomizationMenu = false;
             this.layoutcontrolMain.BackColor = System.Drawing.Color.White;
             this.layoutcontrolMain.Controls.Add(this.chartMain);
             this.layoutcontrolMain.Controls.Add(this.ribbonMenu);
@@ -78,25 +78,25 @@
             // 
             // chartMain
             // 
-            swiftPlotDiagram1.AxisX.DateTimeGridAlignment = DevExpress.XtraCharts.DateTimeMeasurementUnit.Millisecond;
-            swiftPlotDiagram1.AxisX.DateTimeMeasureUnit = DevExpress.XtraCharts.DateTimeMeasurementUnit.Millisecond;
-            swiftPlotDiagram1.AxisX.DateTimeOptions.Format = DevExpress.XtraCharts.DateTimeFormat.Custom;
-            swiftPlotDiagram1.AxisX.DateTimeOptions.FormatString = "mm:ss";
+            //swiftPlotDiagram1.AxisX.DateTimeGridAlignment = DevExpress.XtraCharts.DateTimeMeasurementUnit.Millisecond;
+            //swiftPlotDiagram1.AxisX.DateTimeMeasureUnit = DevExpress.XtraCharts.DateTimeMeasurementUnit.Millisecond;
+            //swiftPlotDiagram1.AxisX.DateTimeOptions.Format = DevExpress.XtraCharts.DateTimeFormat.Custom;
+            //swiftPlotDiagram1.AxisX.DateTimeOptions.FormatString = "mm:ss";
             swiftPlotDiagram1.AxisX.GridLines.Visible = true;
-            swiftPlotDiagram1.AxisX.GridSpacing = 1000D;
-            swiftPlotDiagram1.AxisX.GridSpacingAuto = false;
+            //swiftPlotDiagram1.AxisX.GridSpacing = 1000D;
+            //swiftPlotDiagram1.AxisX.GridSpacingAuto = false;
             swiftPlotDiagram1.AxisX.Label.MaxWidth = 50;
             swiftPlotDiagram1.AxisX.Label.TextAlignment = System.Drawing.StringAlignment.Far;
             swiftPlotDiagram1.AxisX.MinorCount = 9;
-            swiftPlotDiagram1.AxisX.Range.Auto = false;
-            swiftPlotDiagram1.AxisX.Range.MaxValueSerializable = "07/21/2011 17:19:26.000";
-            swiftPlotDiagram1.AxisX.Range.MinValueSerializable = "07/21/2011 17:19:24.000";
-            swiftPlotDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            swiftPlotDiagram1.AxisX.Range.SideMarginsEnabled = true;
+            //swiftPlotDiagram1.AxisX.Range.Auto = false;
+            //swiftPlotDiagram1.AxisX.Range.MaxValueSerializable = "07/21/2011 17:19:26.000";
+            //swiftPlotDiagram1.AxisX.Range.MinValueSerializable = "07/21/2011 17:19:24.000";
+            //swiftPlotDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
+            //swiftPlotDiagram1.AxisX.Range.SideMarginsEnabled = true;
             swiftPlotDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             swiftPlotDiagram1.AxisY.Interlaced = true;
-            swiftPlotDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            swiftPlotDiagram1.AxisY.Range.SideMarginsEnabled = true;
+            //swiftPlotDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
+            //swiftPlotDiagram1.AxisY.Range.SideMarginsEnabled = true;
             swiftPlotDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             swiftPlotDiagram1.Margins.Left = 25;
             swiftPlotDiagram1.Margins.Right = 25;

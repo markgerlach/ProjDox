@@ -16,7 +16,7 @@ using mgCustom;
 
 namespace mgControls
 {
-	public partial class mgDevX_Label_Hyperlink : UserControl, IXtraResizableControl
+	public partial class mgDevX_Label_Hyperlink : UserControl //, IXtraResizableControl
 	{
 		private mgDevX_GridControl _gridControl = null;
 		private DevExpress.XtraEditors.Controls.ImageSlider _imgSlider = null;
@@ -673,7 +673,7 @@ namespace mgControls
 
 		#region IXtraResizableControl Members
 
-		public event EventHandler Changed;
+		public event EventHandler SizeChanged;
 
 		public bool IsCaptionVisible
 		{

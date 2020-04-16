@@ -82,7 +82,7 @@ namespace mgControls
 			this.BackColor = Color.White;
 			SetLayoutBackColor();
 
-            AllowCustomizationMenu = false;
+            AllowCustomization = false;
 		}
 
 		/// <summary>

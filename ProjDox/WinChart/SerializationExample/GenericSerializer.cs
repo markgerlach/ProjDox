@@ -37,9 +37,9 @@ namespace mgWinChart.SerializationExample
                 Console.WriteLine("Serialization error: {0}", exc);
                 return string.Empty;
             }
-            catch
+            finally
             {
-                return string.Empty;
+                //return string.Empty;
             }
             return result;
         }

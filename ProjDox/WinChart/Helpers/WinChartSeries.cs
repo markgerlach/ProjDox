@@ -84,9 +84,9 @@ namespace mgWinChart.Helpers
 
         private void SetUpVariables()
         {
-            _meanLine.Label.Visible = _envelopeTop.Label.Visible = _envelopeBottom.Label.Visible = false;
-            ((LineSeriesView)_meanLine.View).LineMarkerOptions.Visible = ((LineSeriesView)_envelopeBottom.View).LineMarkerOptions.Visible =
-                ((LineSeriesView)_envelopeTop.View).LineMarkerOptions.Visible = false;
+            //_meanLine.Label.Visible = _envelopeTop.Label.Visible = _envelopeBottom.Label.Visible = false;
+            //((LineSeriesView)_meanLine.View).LineMarkerOptions.Visible = ((LineSeriesView)_envelopeBottom.View).LineMarkerOptions.Visible =
+            //    ((LineSeriesView)_envelopeTop.View).LineMarkerOptions.Visible = false;
         }
 
         #endregion Constructors

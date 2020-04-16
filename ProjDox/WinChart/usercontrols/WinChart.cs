@@ -23,6 +23,8 @@ using mgWinChart.SerializationExample;
 using System.Collections;
 
 using mgModel;
+using DevExpress.Sparkline.Core;
+using DevExpress.Charts.Native;
 
 namespace mgWinChart.usercontrols
 {
@@ -181,7 +183,7 @@ namespace mgWinChart.usercontrols
             //this.LabelsVisible = true;
             //cboViewType.Items.AddRange(ViewDictionary.Keys.ToArray());
             //cboColorScheme.Items.AddRange(AppearanceDictionary.Values.ToArray());
-            this.SecondaryAxisY.Visible = false;
+            //this.SecondaryAxisY.Visible = false;
 
             List<UpdatableElement> allElements =
                 new List<UpdatableElement>(Enum.GetValues(typeof(UpdatableElement)).Cast<UpdatableElement>());
@@ -1426,74 +1428,76 @@ namespace mgWinChart.usercontrols
         {
             get
             {
-                return ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeScaleMode;
+                return DateTimeScaleMode.Manual;
+                //return ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeScaleMode;
             }
             set
             {
-                try
-                {
-                    ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeScaleMode = value;
-                    //DateTimeOptions options = ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeOptions;
-                    //options.Format = DateTimeFormat.Custom;
-                    //options.FormatString = "MMMM, YY";
-                    //((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeOptions = options;
-                }
-                catch (ArgumentOutOfRangeException x)
-                {
-                    throw x;
-                }
+                //try
+                //{
+                //    ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeScaleMode = value;
+                //    //DateTimeOptions options = ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeOptions;
+                //    //options.Format = DateTimeFormat.Custom;
+                //    //options.FormatString = "MMMM, YY";
+                //    //((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeOptions = options;
+                //}
+                //catch (ArgumentOutOfRangeException x)
+                //{
+                //    throw x;
+                //}
             }
         }
 
-        /// <summary>
-        /// The unit to use when specifying a manual date/time spacing on the axis
-        /// </summary>
-        [Category("Behavior")]
-        [DefaultValue(DateTimeMeasurementUnit.Day)]
-        [Description("The measuring unit to use for date/time intervals.")]
-        public DateTimeMeasurementUnit PrimaryAxisXDateTimeMeasureUnit
-        {
-            get
-            {
-                return ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeMeasureUnit;
-            }
-            set
-            {
-                try
-                {
-                    ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeMeasureUnit = value;
-                }
-                catch (ArgumentOutOfRangeException x)
-                {
-                    throw x;
-                }
-            }
-        }
+        ///// <summary>
+        ///// The unit to use when specifying a manual date/time spacing on the axis
+        ///// </summary>
+        //[Category("Behavior")]
+        //[DefaultValue(DateTimeMeasurementUnit.Day)]
+        //[Description("The measuring unit to use for date/time intervals.")]
+        //public DateTimeMeasureUnit PrimaryAxisXDateTimeMeasureUnit
+        //{
+        //    get
+        //    {
+        //        return ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeScaleOptions.MeasureUnit;
+        //    }
+        //    set
+        //    {
+        //        try
+        //        {
+        //            ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeScaleOptions.MeasureUnit = 
+        //                DevExpress.XtraCharts.DateTimeMeasureUnit.Day; // .DateTimeMeasureUnit = value;
+        //        }
+        //        catch (ArgumentOutOfRangeException x)
+        //        {
+        //            throw x;
+        //        }
+        //    }
+        //}
 
-        /// <summary>
-        /// How the grid should be aligned on the axis when specifying a custom interval
-        /// </summary>
-        [Category("Behavior")]
-        [DefaultValue(DateTimeMeasurementUnit.Day)]
-        [Description("The measuring unit to use for date/time intervals.")]
-        public DateTimeMeasurementUnit PrimaryAxisXDateTimeGridAlignment
-        {
-            get
-            {
-                return ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeGridAlignment;
-            }
-            set
-            {
-                try
-                {
-                    ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeGridAlignment = value;
-                }
-                catch (ArgumentOutOfRangeException x)
-                {
-                    throw x;
-                }
-            }
-        }
+        ///// <summary>
+        ///// How the grid should be aligned on the axis when specifying a custom interval
+        ///// </summary>
+        //[Category("Behavior")]
+        //[DefaultValue(DateTimeMeasurementUnit.Day)]
+        //[Description("The measuring unit to use for date/time intervals.")]
+        //public DateTimeMeasurementUnit PrimaryAxisXDateTimeGridAlignment
+        //{
+        //    get
+        //    {
+        //        return ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeGridAlignment;
+        //    }
+        //    set
+        //    {
+        //        try
+        //        {
+        //            ((XYDiagram)this.chartMain.Diagram).AxisX.DateTimeGridAlignment = value;
+        //        }
+        //        catch (ArgumentOutOfRangeException x)
+        //        {
+        //            throw x;
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// Whether or not the Secondary X Axis is visible.
@@ -1572,20 +1576,21 @@ namespace mgWinChart.usercontrols
         {
             get
             {
-                return this.SecondaryAxisY.Visible;
+                //return this.SecondaryAxisY.Visible;
+                return true; 
             }
             set
             {
-                this.SecondaryAxisY.Visible = value;
-                if (value && this.chartMain.Diagram is XYDiagram && !((XYDiagram)this.chartMain.Diagram).SecondaryAxesY.Contains(this.SecondaryAxisY))
-                {
-                    XYDiagram diagram = (XYDiagram)this.chartMain.Diagram;
-                    diagram.SecondaryAxesY.Add(this.SecondaryAxisY);
-                }
+                //this.SecondaryAxisY.Visible = value;
+                //if (value && this.chartMain.Diagram is XYDiagram && !((XYDiagram)this.chartMain.Diagram).SecondaryAxesY.Contains(this.SecondaryAxisY))
+                //{
+                //    XYDiagram diagram = (XYDiagram)this.chartMain.Diagram;
+                //    diagram.SecondaryAxesY.Add(this.SecondaryAxisY);
+                //}
 
-                // When the initial loop was taking hold, it can't set the visibility because it's not fully loaded yet
-                ((XYDiagram)this.chartMain.Diagram).SecondaryAxesY[0].SetVisibilityInPane(true, ((XYDiagram)this.chartMain.Diagram).DefaultPane);
-                this.MarkAsDirty(UpdatableElement.SecondaryAxisY);
+                //// When the initial loop was taking hold, it can't set the visibility because it's not fully loaded yet
+                //((XYDiagram)this.chartMain.Diagram).SecondaryAxesY[0].SetVisibilityInPane(true, ((XYDiagram)this.chartMain.Diagram).DefaultPane);
+                //this.MarkAsDirty(UpdatableElement.SecondaryAxisY);
             }
         }
 
@@ -2371,10 +2376,10 @@ namespace mgWinChart.usercontrols
         /// Set the primary axis Date/Time Scale
         /// </summary>
         /// <param name="scaleMode">The scale mode to use</param>
-        public void SetPrimaryAxisXDateTimeScale(DateTimeScaleMode scaleMode)
-        {
-            this.PrimaryAxisXDateTimeScaleMode = scaleMode;
-        }
+        //public void SetPrimaryAxisXDateTimeScale(DateTimeScaleMode scaleMode)
+        //{
+        //    this.PrimaryAxisXDateTimeScaleMode = scaleMode;
+        //}
 
         /// <summary>
         /// Set the primary axis Date/Time Scale
@@ -2383,11 +2388,11 @@ namespace mgWinChart.usercontrols
         /// </summary>
         /// <param name="gridAlignment">The grid alignment to use</param>
         /// <param name="measureUnit">The measurement unit to use</param>
-        public void SetPrimaryAxisXDateTimeScale(DateTimeMeasurementUnit measureUnit,
-            DateTimeMeasurementUnit gridAlignment)
-        {
-            SetPrimaryAxisXDateTimeScale(measureUnit, gridAlignment, false);
-        }
+        //public void SetPrimaryAxisXDateTimeScale(DateTimeMeasurementUnit measureUnit,
+        //    DateTimeMeasurementUnit gridAlignment)
+        //{
+        //    SetPrimaryAxisXDateTimeScale(measureUnit, gridAlignment, false);
+        //}
 
         /// <summary>
         /// Set the primary axis Date/Time Scale
@@ -2397,19 +2402,19 @@ namespace mgWinChart.usercontrols
         /// <param name="gridAlignment">The grid alignment to use</param>
         /// <param name="measureUnit">The measurement unit to use</param>
         /// <param name="onlyIncludeWorkDays">Only includes the working days (M-F) if true</param>
-        public void SetPrimaryAxisXDateTimeScale(DateTimeMeasurementUnit measureUnit,
-            DateTimeMeasurementUnit gridAlignment,
-            bool onlyIncludeWorkDays)
-        {
-            this.PrimaryAxisXDateTimeScaleMode = DateTimeScaleMode.Manual;
-            this.PrimaryAxisXDateTimeMeasureUnit = measureUnit;
-            this.PrimaryAxisXDateTimeGridAlignment = gridAlignment;
-            this.PrimaryAxisX.WorkdaysOnly = onlyIncludeWorkDays;
-            if (onlyIncludeWorkDays)
-            {
-                this.PrimaryAxisX.WorkdaysOptions.Workdays = _workingDays;
-            }
-        }
+        //public void SetPrimaryAxisXDateTimeScale(DateTimeMeasurementUnit measureUnit,
+        //    DateTimeMeasurementUnit gridAlignment,
+        //    bool onlyIncludeWorkDays)
+        //{
+        //    this.PrimaryAxisXDateTimeScaleMode = DateTimeScaleMode.Manual;
+        //    //this.PrimaryAxisXDateTimeMeasureUnit = measureUnit;
+        //    //this.PrimaryAxisXDateTimeGridAlignment = gridAlignment;
+        //    //this.PrimaryAxisX.WorkdaysOnly = onlyIncludeWorkDays;
+        //    //if (onlyIncludeWorkDays)
+        //    //{
+        //    //    this.PrimaryAxisX.WorkdaysOptions.Workdays = _workingDays;
+        //    //}
+        //}
 
         /// <summary>
         /// Set the working days for the grid to use
@@ -3468,16 +3473,16 @@ namespace mgWinChart.usercontrols
                 string pointArgument = string.Empty;
                 switch (series.ArgumentScaleType)
                 {
-                    case ScaleType.DateTime:
-                        if (series.UseSecondaryAxisX)
-                        {
-                            pointArgument = e.SeriesPoint.DateTimeArgument.ToString(this.SecondaryAxisX.DateTimeOptions.FormatString);
-                        }
-                        else
-                        {
-                            pointArgument = e.SeriesPoint.DateTimeArgument.ToString(this.SecondaryAxisX.DateTimeOptions.FormatString);
-                        }
-                        break;
+                    //case ScaleType.DateTime:
+                    //    if (series.UseSecondaryAxisX)
+                    //    {
+                    //        pointArgument = e.SeriesPoint.DateTimeArgument.ToString(this.SecondaryAxisX.DateTimeOptions.FormatString);
+                    //    }
+                    //    else
+                    //    {
+                    //        pointArgument = e.SeriesPoint.DateTimeArgument.ToString(this.SecondaryAxisX.DateTimeOptions.FormatString);
+                    //    }
+                    //    break;
                     case ScaleType.Numerical:
                         pointArgument = Convert.ToString(e.SeriesPoint.NumericalArgument);
                         break;
@@ -3918,16 +3923,16 @@ namespace mgWinChart.usercontrols
                     if (this.chartMain.Diagram is XYDiagram)
                     {
                         ((XYDiagram)chartMain.Diagram).AxisX.Label.Angle = (int)this.PrimaryAxisXLabelAngle;
-                        ((XYDiagram)chartMain.Diagram).AxisX.GridSpacing = (double)this.PrimaryAxisXLabelTickScale;
+                        //((XYDiagram)chartMain.Diagram).AxisX.GridSpacing = (double)this.PrimaryAxisXLabelTickScale;
 
                         UpdateSecondaryAxisX();
                         UpdateSecondaryAxisY();
 
-                        ((XYDiagram)this.chartMain.Diagram).AxisY.NumericOptions.Format = this.PrimaryAxisYFormat;
-                        if (this.PrimaryAxisYFormatPrecision >= 0)
-                        {
-                            ((XYDiagram)this.chartMain.Diagram).AxisY.NumericOptions.Precision = this.PrimaryAxisYFormatPrecision;
-                        }
+                        //((XYDiagram)this.chartMain.Diagram).AxisY.NumericOptions.Format = this.PrimaryAxisYFormat;
+                        //if (this.PrimaryAxisYFormatPrecision >= 0)
+                        //{
+                        //    ((XYDiagram)this.chartMain.Diagram).AxisY.NumericOptions.Precision = this.PrimaryAxisYFormatPrecision;
+                        //}
                     }
 
                     SeriesViewBase sampleView = this.GetSampleSeries().View;
@@ -4005,16 +4010,16 @@ namespace mgWinChart.usercontrols
 
                     //Enable or disable the Value as Percent checkbox to match the view type.
                     Series sample = this.GetSampleSeries();
-                    if (sample.PointOptions is SimplePointOptions || sample.PointOptions is FullStackedPointOptions)
-                    {
-                        chkPercent.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
-                        chkPercent.Checked = ValueAsPercent;
-                    }
-                    else
-                    {
-                        ValueAsPercent = false;
-                        chkPercent.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-                    }
+                    //if (sample.PointOptions is SimplePointOptions || sample.PointOptions is FullStackedPointOptions)
+                    //{
+                    //    chkPercent.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                    //    chkPercent.Checked = ValueAsPercent;
+                    //}
+                    //else
+                    //{
+                    //    ValueAsPercent = false;
+                    //    chkPercent.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                    //}
 
                     // Set the button Glyph
                     bool itemFound = false;
@@ -4042,12 +4047,12 @@ namespace mgWinChart.usercontrols
                 case UpdatableElement.LabelsVisible:
                     #region LabelsVisible
 
-                    foreach (WinChartSeries series in this.Series)
-                    {
-                        series.Label.Visible = this.LabelsVisible;
-                    }
+                    //foreach (WinChartSeries series in this.Series)
+                    //{
+                    //    series.Label.Visible = this.LabelsVisible;
+                    //}
 
-                    SetOverlappingMode();
+                    //SetOverlappingMode();
 
                     #endregion LabelsVisible
                     break;
@@ -4084,37 +4089,37 @@ namespace mgWinChart.usercontrols
                         //Welcome to corner case city.  
                         //To begin with, two separate descendents of PointOptions support PercentOptions.  These two descendents
                         //do not share an interface, so we have to handle them separately.
-                        if (series.Label.PointOptions is SimplePointOptions)
-                        {
-                            ((SimplePointOptions)series.Label.PointOptions).PercentOptions.ValueAsPercent = ValueAsPercent;
-                            if (ValueAsPercent)
-                            {
-                                ((SimplePointOptions)series.Label.PointOptions).ValueNumericOptions.Format = NumericFormat.Percent;
-                                ((SimplePointOptions)series.Label.PointOptions).ValueNumericOptions.Precision = 0;
-                            }
-                            else
-                            {
-                                SetSeriesFormat(series);
-                            }
-                        }
-                        else if (series.Label.PointOptions is FullStackedPointOptions)
-                        {
-                            ((FullStackedPointOptions)series.Label.PointOptions).PercentOptions.ValueAsPercent = ValueAsPercent;
-                            if (ValueAsPercent)
-                            {
-                                ((FullStackedPointOptions)series.Label.PointOptions).ValueNumericOptions.Format = NumericFormat.Percent;
-                                ((FullStackedPointOptions)series.Label.PointOptions).ValueNumericOptions.Precision = 0;
-                            }
-                            else
-                            {
-                                SetSeriesFormat(series);
-                            }
-                        }
-                        else
-                        {
-                            //PercentOptions is not supported, so make sure the format is correct.
-                            SetSeriesFormat(series);
-                        }
+                        //if (series.Label.TextPattern is SimplePointOptions)
+                        //{
+                        //    ((SimplePointOptions)series.Label.PointOptions).PercentOptions.ValueAsPercent = ValueAsPercent;
+                        //    if (ValueAsPercent)
+                        //    {
+                        //        ((SimplePointOptions)series.Label.PointOptions).ValueNumericOptions.Format = NumericFormat.Percent;
+                        //        ((SimplePointOptions)series.Label.PointOptions).ValueNumericOptions.Precision = 0;
+                        //    }
+                        //    else
+                        //    {
+                        //        SetSeriesFormat(series);
+                        //    }
+                        //}
+                        //else if (series.Label.PointOptions is FullStackedPointOptions)
+                        //{
+                        //    ((FullStackedPointOptions)series.Label.PointOptions).PercentOptions.ValueAsPercent = ValueAsPercent;
+                        //    if (ValueAsPercent)
+                        //    {
+                        //        ((FullStackedPointOptions)series.Label.PointOptions).ValueNumericOptions.Format = NumericFormat.Percent;
+                        //        ((FullStackedPointOptions)series.Label.PointOptions).ValueNumericOptions.Precision = 0;
+                        //    }
+                        //    else
+                        //    {
+                        //        SetSeriesFormat(series);
+                        //    }
+                        //}
+                        //else
+                        //{
+                        //    //PercentOptions is not supported, so make sure the format is correct.
+                        //    SetSeriesFormat(series);
+                        //}
                     }
 
                     #endregion ValueAsPercent
@@ -4125,13 +4130,13 @@ namespace mgWinChart.usercontrols
                     //Set the Legend Position in the chart.
                     if (LegendPositioning == LegendPosition.None)
                     {
-                        chartMain.Legend.Visible = false;
+                        //chartMain.Legend.Visible = false;
                         //cboLegend.SelectedItem = "None";
                         barLegend.EditValue = "None";
                     }
                     else
                     {
-                        chartMain.Legend.Visible = true;
+                        //chartMain.Legend.Visible = true;
 
                         // Set the Horizontal Alignment
                         if (this.LegendPositioning.ToString().ToLower().Contains("left"))
@@ -4334,7 +4339,7 @@ namespace mgWinChart.usercontrols
                     {
                         if (series.View is LineSeriesView)
                         {
-                            ((LineSeriesView)series.View).LineMarkerOptions.Visible = this.ShowMarkers;
+                            //((LineSeriesView)series.View).LineMarkerOptions.Visible = this.ShowMarkers;
                         }
                     }
                     chkPointMarkers.Checked = this.ShowMarkers;
@@ -4351,7 +4356,7 @@ namespace mgWinChart.usercontrols
                         AxisX axisX = ((XYDiagram)chartMain.Diagram).AxisX;
                         axisX.Label.Angle = (int)this.PrimaryAxisXLabelAngle;
                         axisX.Label.Visible = this.PrimaryAxisXLabelsVisible;
-                        axisX.GridSpacing = (double)this.PrimaryAxisXLabelTickScale;
+                        //axisX.GridSpacing = (double)this.PrimaryAxisXLabelTickScale;
                     }
 
                     #endregion PrimaryAxisXLabel
@@ -4378,14 +4383,14 @@ namespace mgWinChart.usercontrols
                     if (this.PrimaryAxisY != null)
                     {
                         this.PrimaryAxisY.Title.Text = _visualSettings.PrimaryAxisYTitle;
-                        if (_visualSettings.PrimaryAxisYTitle.Trim().Length > 0)
-                        {
-                            this.PrimaryAxisY.Title.Visible = true;
-                        }
-                        else
-                        {
-                            this.PrimaryAxisY.Title.Visible = false;
-                        }
+                        //if (_visualSettings.PrimaryAxisYTitle.Trim().Length > 0)
+                        //{
+                        //    this.PrimaryAxisY.Title.Visible = true;
+                        //}
+                        //else
+                        //{
+                        //    this.PrimaryAxisY.Title.Visible = false;
+                        //}
                     }
 
                     #endregion
@@ -4396,14 +4401,14 @@ namespace mgWinChart.usercontrols
                     if (this.SecondaryAxisY != null)
                     {
                         this.SecondaryAxisY.Title.Text = _visualSettings.SecondaryAxisYTitle;
-                        if (_visualSettings.SecondaryAxisYTitle.Trim().Length > 0)
-                        {
-                            this.SecondaryAxisY.Title.Visible = true;
-                        }
-                        else
-                        {
-                            this.SecondaryAxisY.Title.Visible = false;
-                        }
+                        //if (_visualSettings.SecondaryAxisYTitle.Trim().Length > 0)
+                        //{
+                        //    this.SecondaryAxisY.Title.Visible = true;
+                        //}
+                        //else
+                        //{
+                        //    this.SecondaryAxisY.Title.Visible = false;
+                        //}
                     }
                     #endregion
                     break;
@@ -4563,16 +4568,16 @@ namespace mgWinChart.usercontrols
                     if (this.chartMain.Diagram is XYDiagram)
                     {
                         ((XYDiagram)chartMain.Diagram).AxisX.Label.Angle = (int)this.PrimaryAxisXLabelAngle;
-                        ((XYDiagram)chartMain.Diagram).AxisX.GridSpacing = (double)this.PrimaryAxisXLabelTickScale;
+                        //((XYDiagram)chartMain.Diagram).AxisX.GridSpacing = (double)this.PrimaryAxisXLabelTickScale;
 
                         UpdateSecondaryAxisX();
                         UpdateSecondaryAxisY();
 
-                        ((XYDiagram)this.chartMain.Diagram).AxisY.NumericOptions.Format = this.PrimaryAxisYFormat;
-                        if (this.PrimaryAxisYFormatPrecision >= 0)
-                        {
-                            ((XYDiagram)this.chartMain.Diagram).AxisY.NumericOptions.Precision = this.PrimaryAxisYFormatPrecision;
-                        }
+                        //((XYDiagram)this.chartMain.Diagram).AxisY.NumericOptions.Format = this.PrimaryAxisYFormat;
+                        //if (this.PrimaryAxisYFormatPrecision >= 0)
+                        //{
+                        //    ((XYDiagram)this.chartMain.Diagram).AxisY.NumericOptions.Precision = this.PrimaryAxisYFormatPrecision;
+                        //}
                     }
 
                     //Stacked bar groups don't support BarSeriesLabelPosition.Top, so if the new view is stacked, change the Top to Top Inside.
@@ -4607,17 +4612,17 @@ namespace mgWinChart.usercontrols
                     //}
 
                     //Enable or disable the Value as Percent checkbox to match the view type.
-                    Series sample = this.GetSampleSeries();
-                    if (sample.PointOptions is SimplePointOptions || sample.PointOptions is FullStackedPointOptions)
-                    {
-                        chkPercent.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
-                        chkPercent.Checked = ValueAsPercent;
-                    }
-                    else
-                    {
-                        ValueAsPercent = false;
-                        chkPercent.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-                    }
+                    //Series sample = this.GetSampleSeries();
+                    //if (sample.PointOptions is SimplePointOptions || sample.PointOptions is FullStackedPointOptions)
+                    //{
+                    //    chkPercent.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                    //    chkPercent.Checked = ValueAsPercent;
+                    //}
+                    //else
+                    //{
+                    //    ValueAsPercent = false;
+                    //    chkPercent.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                    //}
 
                     //Update the SeriesUIs
                     shouldUpdateUI = true;
@@ -4648,13 +4653,13 @@ namespace mgWinChart.usercontrols
                 case "LabelsVisible":
                     #region LabelsVisible
 
-                    foreach (WinChartSeries series in this.Series)
-                    {
-                        series.Label.Visible = this.LabelsVisible;
-                    }
+                    //foreach (WinChartSeries series in this.Series)
+                    //{
+                    //    series.Label.Visible = this.LabelsVisible;
+                    //}
 
-                    SetOverlappingMode();
-                    shouldUpdateUI = true;
+                    //SetOverlappingMode();
+                    //shouldUpdateUI = true;
 
                     #endregion LabelsVisible
                     break;
@@ -4691,37 +4696,37 @@ namespace mgWinChart.usercontrols
                         //Welcome to corner case city.  
                         //To begin with, two separate descendents of PointOptions support PercentOptions.  These two descendents
                         //do not share an interface, so we have to handle them separately.
-                        if (series.PointOptions is SimplePointOptions)
-                        {
-                            ((SimplePointOptions)series.PointOptions).PercentOptions.ValueAsPercent = ValueAsPercent;
-                            if (ValueAsPercent)
-                            {
-                                ((SimplePointOptions)series.PointOptions).ValueNumericOptions.Format = NumericFormat.Percent;
-                                ((SimplePointOptions)series.PointOptions).ValueNumericOptions.Precision = 0;
-                            }
-                            else
-                            {
-                                SetSeriesFormat(series);
-                            }
-                        }
-                        else if (series.PointOptions is FullStackedPointOptions)
-                        {
-                            ((FullStackedPointOptions)series.PointOptions).PercentOptions.ValueAsPercent = ValueAsPercent;
-                            if (ValueAsPercent)
-                            {
-                                ((FullStackedPointOptions)series.PointOptions).ValueNumericOptions.Format = NumericFormat.Percent;
-                                ((FullStackedPointOptions)series.PointOptions).ValueNumericOptions.Precision = 0;
-                            }
-                            else
-                            {
-                                SetSeriesFormat(series);
-                            }
-                        }
-                        else
-                        {
-                            //PercentOptions is not supported, so make sure the format is correct.
-                            SetSeriesFormat(series);
-                        }
+                        //if (series.PointOptions is SimplePointOptions)
+                        //{
+                        //    ((SimplePointOptions)series.PointOptions).PercentOptions.ValueAsPercent = ValueAsPercent;
+                        //    if (ValueAsPercent)
+                        //    {
+                        //        ((SimplePointOptions)series.PointOptions).ValueNumericOptions.Format = NumericFormat.Percent;
+                        //        ((SimplePointOptions)series.PointOptions).ValueNumericOptions.Precision = 0;
+                        //    }
+                        //    else
+                        //    {
+                        //        SetSeriesFormat(series);
+                        //    }
+                        //}
+                        //else if (series.PointOptions is FullStackedPointOptions)
+                        //{
+                        //    ((FullStackedPointOptions)series.PointOptions).PercentOptions.ValueAsPercent = ValueAsPercent;
+                        //    if (ValueAsPercent)
+                        //    {
+                        //        ((FullStackedPointOptions)series.PointOptions).ValueNumericOptions.Format = NumericFormat.Percent;
+                        //        ((FullStackedPointOptions)series.PointOptions).ValueNumericOptions.Precision = 0;
+                        //    }
+                        //    else
+                        //    {
+                        //        SetSeriesFormat(series);
+                        //    }
+                        //}
+                        //else
+                        //{
+                        //    //PercentOptions is not supported, so make sure the format is correct.
+                        //    SetSeriesFormat(series);
+                        //}
                     }
 
                     #endregion ValueAsPercent
@@ -4732,13 +4737,13 @@ namespace mgWinChart.usercontrols
                     //Set the Legend Position in the chart.
                     if (LegendPositioning == LegendPosition.None)
                     {
-                        chartMain.Legend.Visible = false;
+                        //chartMain.Legend.Visible = false;
                         //cboLegend.SelectedItem = "None";
                         barLegend.EditValue = "None";
                     }
                     else
                     {
-                        chartMain.Legend.Visible = true;
+                        //chartMain.Legend.Visible = true;
                         //The only Horizontal Alignment allowed by our custom enum is Left Outside
                         chartMain.Legend.AlignmentHorizontal = LegendAlignmentHorizontal.LeftOutside;
                         if (LegendPositioning == LegendPosition.CenteredLeft)
@@ -4851,7 +4856,7 @@ namespace mgWinChart.usercontrols
 
                     if (chartMain.Diagram is XYDiagram)
                     {
-                        ((XYDiagram)chartMain.Diagram).AxisX.GridSpacing = (double)this.PrimaryAxisXLabelTickScale;
+                        //((XYDiagram)chartMain.Diagram).AxisX.GridSpacing = (double)this.PrimaryAxisXLabelTickScale;
                     }
                     break;
 
@@ -4881,14 +4886,14 @@ namespace mgWinChart.usercontrols
                     if (this.PrimaryAxisY != null)
                     {
                         this.PrimaryAxisY.Title.Text = _visualSettings.PrimaryAxisYTitle;
-                        if (_visualSettings.PrimaryAxisYTitle.Trim().Length > 0)
-                        {
-                            this.PrimaryAxisY.Title.Visible = true;
-                        }
-                        else
-                        {
-                            this.PrimaryAxisY.Title.Visible = false;
-                        }
+                        //if (_visualSettings.PrimaryAxisYTitle.Trim().Length > 0)
+                        //{
+                        //    this.PrimaryAxisY.Title.Visible = true;
+                        //}
+                        //else
+                        //{
+                        //    this.PrimaryAxisY.Title.Visible = false;
+                        //}
                     }
 
                     #endregion
@@ -4899,14 +4904,14 @@ namespace mgWinChart.usercontrols
                     if (this.SecondaryAxisY != null)
                     {
                         this.SecondaryAxisY.Title.Text = _visualSettings.SecondaryAxisYTitle;
-                        if (_visualSettings.SecondaryAxisYTitle.Trim().Length > 0)
-                        {
-                            this.SecondaryAxisY.Title.Visible = true;
-                        }
-                        else
-                        {
-                            this.SecondaryAxisY.Title.Visible = false;
-                        }
+                        //if (_visualSettings.SecondaryAxisYTitle.Trim().Length > 0)
+                        //{
+                        //    this.SecondaryAxisY.Title.Visible = true;
+                        //}
+                        //else
+                        //{
+                        //    this.SecondaryAxisY.Title.Visible = false;
+                        //}
                     }
                     #endregion
                     break;
@@ -5427,23 +5432,23 @@ namespace mgWinChart.usercontrols
         /// <param name="series">The series to format.</param>
         private void SetSeriesFormat(WinChartSeries series)
         {
-            series.LegendPointOptions.PointView = PointView.Argument;
-            if (_seriesForSecondAxisY.Contains(series.Name))
-            {
-                series.PointOptions.ValueNumericOptions.Format = this.SecondaryAxisYFormat;
-                if (this.SecondaryAxisYFormatPrecision >= 0)
-                {
-                    series.PointOptions.ValueNumericOptions.Precision = this.SecondaryAxisYFormatPrecision;
-                }
-            }
-            else
-            {
-                series.PointOptions.ValueNumericOptions.Format = this.PrimaryAxisYFormat;
-                if (this.PrimaryAxisYFormatPrecision >= 0)
-                {
-                    series.PointOptions.ValueNumericOptions.Precision = this.PrimaryAxisYFormatPrecision;
-                }
-            }
+            //series.LegendPointOptions.PointView = PointView.Argument;
+            //if (_seriesForSecondAxisY.Contains(series.Name))
+            //{
+            //    series.PointOptions.ValueNumericOptions.Format = this.SecondaryAxisYFormat;
+            //    if (this.SecondaryAxisYFormatPrecision >= 0)
+            //    {
+            //        series.PointOptions.ValueNumericOptions.Precision = this.SecondaryAxisYFormatPrecision;
+            //    }
+            //}
+            //else
+            //{
+            //    series.PointOptions.ValueNumericOptions.Format = this.PrimaryAxisYFormat;
+            //    if (this.PrimaryAxisYFormatPrecision >= 0)
+            //    {
+            //        series.PointOptions.ValueNumericOptions.Precision = this.PrimaryAxisYFormatPrecision;
+            //    }
+            //}
         }
 
         /// <summary>
@@ -5478,29 +5483,31 @@ namespace mgWinChart.usercontrols
 
             System.Globalization.DateTimeFormatInfo currentInfo = System.Threading.Thread.CurrentThread.CurrentCulture.DateTimeFormat;
 
-            switch (axis.DateTimeOptions.Format)
-            {
-                case DateTimeFormat.Custom:
-                    return axis.DateTimeOptions.FormatString;
-                case DateTimeFormat.General:
-                    return string.Format("{0} {1}", currentInfo.ShortDatePattern, currentInfo.ShortTimePattern);
-                case DateTimeFormat.LongDate:
-                    return currentInfo.LongDatePattern;
-                case DateTimeFormat.LongTime:
-                    return currentInfo.LongTimePattern;
-                case DateTimeFormat.MonthAndDay:
-                    return currentInfo.MonthDayPattern;
-                case DateTimeFormat.MonthAndYear:
-                    return currentInfo.YearMonthPattern;
-                case DateTimeFormat.QuarterAndYear:
-                    return "QQ yyyy";
-                case DateTimeFormat.ShortDate:
-                    return currentInfo.ShortDatePattern;
-                case DateTimeFormat.ShortTime:
-                    return currentInfo.ShortTimePattern;
-                default:
-                    return "yyyy-MM-dd";
-            }
+            //switch (axis.DateTimeOptions.Format)
+            //{
+            //    case DateTimeFormat.Custom:
+            //        return axis.DateTimeOptions.FormatString;
+            //    case DateTimeFormat.General:
+            //        return string.Format("{0} {1}", currentInfo.ShortDatePattern, currentInfo.ShortTimePattern);
+            //    case DateTimeFormat.LongDate:
+            //        return currentInfo.LongDatePattern;
+            //    case DateTimeFormat.LongTime:
+            //        return currentInfo.LongTimePattern;
+            //    case DateTimeFormat.MonthAndDay:
+            //        return currentInfo.MonthDayPattern;
+            //    case DateTimeFormat.MonthAndYear:
+            //        return currentInfo.YearMonthPattern;
+            //    case DateTimeFormat.QuarterAndYear:
+            //        return "QQ yyyy";
+            //    case DateTimeFormat.ShortDate:
+            //        return currentInfo.ShortDatePattern;
+            //    case DateTimeFormat.ShortTime:
+            //        return currentInfo.ShortTimePattern;
+            //    default:
+            //        return "yyyy-MM-dd";
+            //}
+
+            return "yyyy-MM-dd";
         }
 
         #endregion Private Methods

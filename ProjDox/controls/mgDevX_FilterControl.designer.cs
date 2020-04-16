@@ -43,7 +43,7 @@ namespace mgControls
 			// 
 			// layoutMain
 			// 
-			this.layoutMain.AllowCustomizationMenu = false;
+			//this.layoutMain.AllowCustomizationMenu = false;
 			this.layoutMain.Controls.Add(this.lblExistingFilter);
 			this.layoutMain.Controls.Add(this.filterControl1);
 			this.layoutMain.Dock = System.Windows.Forms.DockStyle.Fill;

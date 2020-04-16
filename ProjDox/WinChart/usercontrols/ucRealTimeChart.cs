@@ -225,8 +225,8 @@ namespace mgWinChart.usercontrols
             get
             {
                 SwiftPlotDiagram diagram = chartMain.Diagram as SwiftPlotDiagram;
-                if (diagram != null)
-                    return diagram.AxisX.Range;
+                //if (diagram != null)
+                //    return diagram.AxisX.Range;
                 return null;
             }
         }

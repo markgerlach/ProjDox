@@ -1613,12 +1613,12 @@ namespace Newtonsoft.Json.Bson
       AddValue(value, BsonType.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt32"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt32"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(uint value)
+        /// <summary>
+        /// Writes a <see cref="UInt32"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt32"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(uint value)
     {
       if (value > int.MaxValue)
         throw JsonWriterException.Create(this, "Value is too large to fit in a signed 32 bit integer. BSON does not support unsigned values.", null);
@@ -1637,12 +1637,12 @@ namespace Newtonsoft.Json.Bson
       AddValue(value, BsonType.Long);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt64"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt64"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(ulong value)
+        /// <summary>
+        /// Writes a <see cref="UInt64"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt64"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(ulong value)
     {
       if (value > long.MaxValue)
         throw JsonWriterException.Create(this, "Value is too large to fit in a signed 64 bit integer. BSON does not support unsigned values.", null);
@@ -1691,12 +1691,12 @@ namespace Newtonsoft.Json.Bson
       AddValue(value, BsonType.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt16"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt16"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(ushort value)
+        /// <summary>
+        /// Writes a <see cref="UInt16"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt16"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(ushort value)
     {
       base.WriteValue(value);
       AddValue(value, BsonType.Integer);
@@ -1728,22 +1728,22 @@ namespace Newtonsoft.Json.Bson
       AddValue(value, BsonType.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="SByte"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="SByte"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(sbyte value)
-    {
-      base.WriteValue(value);
-      AddValue(value, BsonType.Integer);
-    }
+        /// <summary>
+        /// Writes a <see cref="SByte"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="SByte"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(sbyte value)
+        {
+            base.WriteValue(value);
+            AddValue(value, BsonType.Integer);
+        }
 
-    /// <summary>
-    /// Writes a <see cref="Decimal"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="Decimal"/> value to write.</param>
-    public override void WriteValue(decimal value)
+        /// <summary>
+        /// Writes a <see cref="Decimal"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="Decimal"/> value to write.</param>
+        public override void WriteValue(decimal value)
     {
       base.WriteValue(value);
       AddValue(value, BsonType.Number);
@@ -8960,13 +8960,13 @@ namespace Newtonsoft.Json.Linq
       return Convert.ToInt16(v.Value, CultureInfo.InvariantCulture);
     }
 
-    /// <summary>
-    /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="System.UInt16"/>.
-    /// </summary>
-    /// <param name="value">The value.</param>
-    /// <returns>The result of the conversion.</returns>
-    [CLSCompliant(false)]
-    public static explicit operator ushort(JToken value)
+        /// <summary>
+        /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="System.UInt16"/>.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>The result of the conversion.</returns>
+        [CLSCompliant(false)]
+        public static explicit operator ushort(JToken value)
     {
       JValue v = EnsureValue(value);
       if (v == null || !ValidateToken(v, NumberTypes, false))
@@ -8980,7 +8980,7 @@ namespace Newtonsoft.Json.Linq
     /// </summary>
     /// <param name="value">The value.</param>
     /// <returns>The result of the conversion.</returns>
-    [CLSCompliant(false)]
+    //[CLSCompliant(false)]
     public static explicit operator char(JToken value)
     {
       JValue v = EnsureValue(value);
@@ -9038,13 +9038,13 @@ namespace Newtonsoft.Json.Linq
       return (v.Value != null) ? (short?)Convert.ToInt16(v.Value, CultureInfo.InvariantCulture) : null;
     }
 
-    /// <summary>
-    /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="Nullable{UInt16}"/>.
-    /// </summary>
-    /// <param name="value">The value.</param>
-    /// <returns>The result of the conversion.</returns>
-    [CLSCompliant(false)]
-    public static explicit operator ushort?(JToken value)
+        /// <summary>
+        /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="Nullable{UInt16}"/>.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>The result of the conversion.</returns>
+        [CLSCompliant(false)]
+        public static explicit operator ushort?(JToken value)
     {
       if (value == null)
         return null;
@@ -9135,13 +9135,13 @@ namespace Newtonsoft.Json.Linq
       return Convert.ToDecimal(v.Value, CultureInfo.InvariantCulture);
     }
 
-    /// <summary>
-    /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="Nullable{UInt32}"/>.
-    /// </summary>
-    /// <param name="value">The value.</param>
-    /// <returns>The result of the conversion.</returns>
-    [CLSCompliant(false)]
-    public static explicit operator uint?(JToken value)
+        /// <summary>
+        /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="Nullable{UInt32}"/>.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>The result of the conversion.</returns>
+        [CLSCompliant(false)]
+        public static explicit operator uint?(JToken value)
     {
       if (value == null)
         return null;
@@ -9153,13 +9153,13 @@ namespace Newtonsoft.Json.Linq
       return (v.Value != null) ? (uint?)Convert.ToUInt32(v.Value, CultureInfo.InvariantCulture) : null;
     }
 
-    /// <summary>
-    /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="Nullable{UInt64}"/>.
-    /// </summary>
-    /// <param name="value">The value.</param>
-    /// <returns>The result of the conversion.</returns>
-    [CLSCompliant(false)]
-    public static explicit operator ulong?(JToken value)
+        /// <summary>
+        /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="Nullable{UInt64}"/>.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>The result of the conversion.</returns>
+        [CLSCompliant(false)]
+        public static explicit operator ulong?(JToken value)
     {
       if (value == null)
         return null;
@@ -9236,13 +9236,13 @@ namespace Newtonsoft.Json.Linq
       return Convert.ToUInt32(v.Value, CultureInfo.InvariantCulture);
     }
 
-    /// <summary>
-    /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="System.UInt64"/>.
-    /// </summary>
-    /// <param name="value">The value.</param>
-    /// <returns>The result of the conversion.</returns>
-    [CLSCompliant(false)]
-    public static explicit operator ulong(JToken value)
+        /// <summary>
+        /// Performs an explicit conversion from <see cref="Newtonsoft.Json.Linq.JToken"/> to <see cref="System.UInt64"/>.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>The result of the conversion.</returns>
+        [CLSCompliant(false)]
+        public static explicit operator ulong(JToken value)
     {
       JValue v = EnsureValue(value);
       if (v == null || !ValidateToken(v, NumberTypes, false))
@@ -9449,19 +9449,19 @@ namespace Newtonsoft.Json.Linq
     /// </summary>
     /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
     /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
-    [CLSCompliant(false)]
+    //[CLSCompliant(false)]
     public static implicit operator JToken(short value)
     {
       return new JValue(value);
     }
 
-    /// <summary>
-    /// Performs an implicit conversion from <see cref="UInt16"/> to <see cref="JToken"/>.
-    /// </summary>
-    /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
-    /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
-    [CLSCompliant(false)]
-    public static implicit operator JToken(ushort value)
+        /// <summary>
+        /// Performs an implicit conversion from <see cref="UInt16"/> to <see cref="JToken"/>.
+        /// </summary>
+        /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
+        /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
+        [CLSCompliant(false)]
+        public static implicit operator JToken(ushort value)
     {
       return new JValue(value);
     }
@@ -9531,41 +9531,41 @@ namespace Newtonsoft.Json.Linq
     /// </summary>
     /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
     /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
-    [CLSCompliant(false)]
+    //[CLSCompliant(false)]
     public static implicit operator JToken(short? value)
     {
       return new JValue(value);
     }
 
-    /// <summary>
-    /// Performs an implicit conversion from <see cref="Nullable{UInt16}"/> to <see cref="JToken"/>.
-    /// </summary>
-    /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
-    /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
-    [CLSCompliant(false)]
-    public static implicit operator JToken(ushort? value)
+        /// <summary>
+        /// Performs an implicit conversion from <see cref="Nullable{UInt16}"/> to <see cref="JToken"/>.
+        /// </summary>
+        /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
+        /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
+        [CLSCompliant(false)]
+        public static implicit operator JToken(ushort? value)
     {
       return new JValue(value);
     }
 
-    /// <summary>
-    /// Performs an implicit conversion from <see cref="Nullable{UInt32}"/> to <see cref="JToken"/>.
-    /// </summary>
-    /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
-    /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
-    [CLSCompliant(false)]
-    public static implicit operator JToken(uint? value)
+        /// <summary>
+        /// Performs an implicit conversion from <see cref="Nullable{UInt32}"/> to <see cref="JToken"/>.
+        /// </summary>
+        /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
+        /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
+        [CLSCompliant(false)]
+        public static implicit operator JToken(uint? value)
     {
       return new JValue(value);
     }
 
-    /// <summary>
-    /// Performs an implicit conversion from <see cref="Nullable{UInt64}"/> to <see cref="JToken"/>.
-    /// </summary>
-    /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
-    /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
-    [CLSCompliant(false)]
-    public static implicit operator JToken(ulong? value)
+        /// <summary>
+        /// Performs an implicit conversion from <see cref="Nullable{UInt64}"/> to <see cref="JToken"/>.
+        /// </summary>
+        /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
+        /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
+        [CLSCompliant(false)]
+        public static implicit operator JToken(ulong? value)
     {
       return new JValue(value);
     }
@@ -9600,24 +9600,24 @@ namespace Newtonsoft.Json.Linq
       return new JValue(value);
     }
 
-    /// <summary>
-    /// Performs an implicit conversion from <see cref="UInt32"/> to <see cref="JToken"/>.
-    /// </summary>
-    /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
-    /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
-    [CLSCompliant(false)]
-    public static implicit operator JToken(uint value)
+        /// <summary>
+        /// Performs an implicit conversion from <see cref="UInt32"/> to <see cref="JToken"/>.
+        /// </summary>
+        /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
+        /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
+        [CLSCompliant(false)]
+        public static implicit operator JToken(uint value)
     {
       return new JValue(value);
     }
 
-    /// <summary>
-    /// Performs an implicit conversion from <see cref="UInt64"/> to <see cref="JToken"/>.
-    /// </summary>
-    /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
-    /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
-    [CLSCompliant(false)]
-    public static implicit operator JToken(ulong value)
+        /// <summary>
+        /// Performs an implicit conversion from <see cref="UInt64"/> to <see cref="JToken"/>.
+        /// </summary>
+        /// <param name="value">The value to create a <see cref="JValue"/> from.</param>
+        /// <returns>The <see cref="JValue"/> initialized with the specified value.</returns>
+        [CLSCompliant(false)]
+        public static implicit operator JToken(ulong value)
     {
       return new JValue(value);
     }
@@ -10721,12 +10721,12 @@ namespace Newtonsoft.Json.Linq
       AddValue(value, JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt32"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt32"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(uint value)
+        /// <summary>
+        /// Writes a <see cref="UInt32"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt32"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(uint value)
     {
       base.WriteValue(value);
       AddValue(value, JsonToken.Integer);
@@ -10742,12 +10742,12 @@ namespace Newtonsoft.Json.Linq
       AddValue(value, JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt64"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt64"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(ulong value)
+        /// <summary>
+        /// Writes a <see cref="UInt64"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt64"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(ulong value)
     {
       base.WriteValue(value);
       AddValue(value, JsonToken.Integer);
@@ -10793,12 +10793,12 @@ namespace Newtonsoft.Json.Linq
       AddValue(value, JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt16"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt16"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(ushort value)
+        /// <summary>
+        /// Writes a <see cref="UInt16"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt16"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(ushort value)
     {
       base.WriteValue(value);
       AddValue(value, JsonToken.Integer);
@@ -10830,12 +10830,12 @@ namespace Newtonsoft.Json.Linq
       AddValue(value, JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="SByte"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="SByte"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(sbyte value)
+        /// <summary>
+        /// Writes a <see cref="SByte"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="SByte"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(sbyte value)
     {
       base.WriteValue(value);
       AddValue(value, JsonToken.Integer);
@@ -10968,12 +10968,12 @@ namespace Newtonsoft.Json.Linq
     {
     }
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="JValue"/> class with the given value.
-    /// </summary>
-    /// <param name="value">The value.</param>
-    [CLSCompliant(false)]
-    public JValue(ulong value)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JValue"/> class with the given value.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        [CLSCompliant(false)]
+        public JValue(ulong value)
       : this(value, JTokenType.Integer)
     {
     }
@@ -26709,24 +26709,24 @@ namespace Newtonsoft.Json
       return value.ToString(null, CultureInfo.InvariantCulture);
     }
 
-    /// <summary>
-    /// Converts the <see cref="UInt16"/> to its JSON string representation.
-    /// </summary>
-    /// <param name="value">The value to convert.</param>
-    /// <returns>A JSON string representation of the <see cref="UInt16"/>.</returns>
-    [CLSCompliant(false)]
-    public static string ToString(ushort value)
+        /// <summary>
+        /// Converts the <see cref="UInt16"/> to its JSON string representation.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>A JSON string representation of the <see cref="UInt16"/>.</returns>
+        [CLSCompliant(false)]
+        public static string ToString(ushort value)
     {
       return value.ToString(null, CultureInfo.InvariantCulture);
     }
 
-    /// <summary>
-    /// Converts the <see cref="UInt32"/> to its JSON string representation.
-    /// </summary>
-    /// <param name="value">The value to convert.</param>
-    /// <returns>A JSON string representation of the <see cref="UInt32"/>.</returns>
-    [CLSCompliant(false)]
-    public static string ToString(uint value)
+        /// <summary>
+        /// Converts the <see cref="UInt32"/> to its JSON string representation.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>A JSON string representation of the <see cref="UInt32"/>.</returns>
+        [CLSCompliant(false)]
+        public static string ToString(uint value)
     {
       return value.ToString(null, CultureInfo.InvariantCulture);
     }
@@ -26741,13 +26741,13 @@ namespace Newtonsoft.Json
       return value.ToString(null, CultureInfo.InvariantCulture);
     }
 
-    /// <summary>
-    /// Converts the <see cref="UInt64"/> to its JSON string representation.
-    /// </summary>
-    /// <param name="value">The value to convert.</param>
-    /// <returns>A JSON string representation of the <see cref="UInt64"/>.</returns>
-    [CLSCompliant(false)]
-    public static string ToString(ulong value)
+        /// <summary>
+        /// Converts the <see cref="UInt64"/> to its JSON string representation.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>A JSON string representation of the <see cref="UInt64"/>.</returns>
+        [CLSCompliant(false)]
+        public static string ToString(ulong value)
     {
       return value.ToString(null, CultureInfo.InvariantCulture);
     }
@@ -26798,13 +26798,13 @@ namespace Newtonsoft.Json
       return value.ToString(null, CultureInfo.InvariantCulture);
     }
 
-    /// <summary>
-    /// Converts the <see cref="SByte"/> to its JSON string representation.
-    /// </summary>
-    /// <param name="value">The value to convert.</param>
-    /// <returns>A JSON string representation of the <see cref="SByte"/>.</returns>
-    [CLSCompliant(false)]
-    public static string ToString(sbyte value)
+        /// <summary>
+        /// Converts the <see cref="SByte"/> to its JSON string representation.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>A JSON string representation of the <see cref="SByte"/>.</returns>
+        [CLSCompliant(false)]
+        public static string ToString(sbyte value)
     {
       return value.ToString(null, CultureInfo.InvariantCulture);
     }
@@ -31950,12 +31950,12 @@ namespace Newtonsoft.Json
       WriteValueInternal(JsonConvert.ToString(value), JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt32"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt32"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(uint value)
+        /// <summary>
+        /// Writes a <see cref="UInt32"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt32"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(uint value)
     {
       InternalWriteValue(JsonToken.Integer);
       WriteValueInternal(JsonConvert.ToString(value), JsonToken.Integer);
@@ -31971,12 +31971,12 @@ namespace Newtonsoft.Json
       WriteValueInternal(JsonConvert.ToString(value), JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt64"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt64"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(ulong value)
+        /// <summary>
+        /// Writes a <see cref="UInt64"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt64"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(ulong value)
     {
       InternalWriteValue(JsonToken.Integer);
       WriteValueInternal(JsonConvert.ToString(value), JsonToken.Integer);
@@ -32022,12 +32022,12 @@ namespace Newtonsoft.Json
       WriteValueInternal(JsonConvert.ToString(value), JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt16"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt16"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(ushort value)
+        /// <summary>
+        /// Writes a <see cref="UInt16"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt16"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(ushort value)
     {
       InternalWriteValue(JsonToken.Integer);
       WriteValueInternal(JsonConvert.ToString(value), JsonToken.Integer);
@@ -32053,12 +32053,12 @@ namespace Newtonsoft.Json
       WriteValueInternal(JsonConvert.ToString(value), JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="SByte"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="SByte"/> value to write.</param>
-    [CLSCompliant(false)]
-    public override void WriteValue(sbyte value)
+        /// <summary>
+        /// Writes a <see cref="SByte"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="SByte"/> value to write.</param>
+        [CLSCompliant(false)]
+        public override void WriteValue(sbyte value)
     {
       InternalWriteValue(JsonToken.Integer);
       WriteValueInternal(JsonConvert.ToString(value), JsonToken.Integer);
@@ -33800,12 +33800,12 @@ namespace Newtonsoft.Json
       InternalWriteValue(JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt32"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt32"/> value to write.</param>
-    [CLSCompliant(false)]
-    public virtual void WriteValue(uint value)
+        /// <summary>
+        /// Writes a <see cref="UInt32"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt32"/> value to write.</param>
+        [CLSCompliant(false)]
+        public virtual void WriteValue(uint value)
     {
       InternalWriteValue(JsonToken.Integer);
     }
@@ -33819,12 +33819,12 @@ namespace Newtonsoft.Json
       InternalWriteValue(JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt64"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt64"/> value to write.</param>
-    [CLSCompliant(false)]
-    public virtual void WriteValue(ulong value)
+        /// <summary>
+        /// Writes a <see cref="UInt64"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt64"/> value to write.</param>
+        [CLSCompliant(false)]
+        public virtual void WriteValue(ulong value)
     {
       InternalWriteValue(JsonToken.Integer);
     }
@@ -33865,12 +33865,12 @@ namespace Newtonsoft.Json
       InternalWriteValue(JsonToken.Integer);
     }
 
-    /// <summary>
-    /// Writes a <see cref="UInt16"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="UInt16"/> value to write.</param>
-    [CLSCompliant(false)]
-    public virtual void WriteValue(ushort value)
+        /// <summary>
+        /// Writes a <see cref="UInt16"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="UInt16"/> value to write.</param>
+        [CLSCompliant(false)]
+        public virtual void WriteValue(ushort value)
     {
       InternalWriteValue(JsonToken.Integer);
     }
@@ -33962,12 +33962,12 @@ namespace Newtonsoft.Json
         WriteValue(value.Value);
     }
 
-    /// <summary>
-    /// Writes a <see cref="Nullable{UInt32}"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="Nullable{UInt32}"/> value to write.</param>
-    [CLSCompliant(false)]
-    public virtual void WriteValue(uint? value)
+        /// <summary>
+        /// Writes a <see cref="Nullable{UInt32}"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="Nullable{UInt32}"/> value to write.</param>
+        [CLSCompliant(false)]
+        public virtual void WriteValue(uint? value)
     {
       if (value == null)
         WriteNull();
@@ -33987,12 +33987,12 @@ namespace Newtonsoft.Json
         WriteValue(value.Value);
     }
 
-    /// <summary>
-    /// Writes a <see cref="Nullable{UInt64}"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="Nullable{UInt64}"/> value to write.</param>
-    [CLSCompliant(false)]
-    public virtual void WriteValue(ulong? value)
+        /// <summary>
+        /// Writes a <see cref="Nullable{UInt64}"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="Nullable{UInt64}"/> value to write.</param>
+        [CLSCompliant(false)]
+        public virtual void WriteValue(ulong? value)
     {
       if (value == null)
         WriteNull();
@@ -34048,12 +34048,12 @@ namespace Newtonsoft.Json
         WriteValue(value.Value);
     }
 
-    /// <summary>
-    /// Writes a <see cref="Nullable{UInt16}"/> value.
-    /// </summary>
-    /// <param name="value">The <see cref="Nullable{UInt16}"/> value to write.</param>
-    [CLSCompliant(false)]
-    public virtual void WriteValue(ushort? value)
+        /// <summary>
+        /// Writes a <see cref="Nullable{UInt16}"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="Nullable{UInt16}"/> value to write.</param>
+        [CLSCompliant(false)]
+        public virtual void WriteValue(ushort? value)
     {
       if (value == null)
         WriteNull();

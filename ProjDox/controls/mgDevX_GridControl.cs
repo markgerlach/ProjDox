@@ -33,7 +33,7 @@ using mgModel;
 
 namespace mgControls
 {
-	public class mgDevX_GridControl : DevExpress.XtraGrid.GridControl, IXtraResizableControl
+	public class mgDevX_GridControl : DevExpress.XtraGrid.GridControl //, IXtraResizableControl
 	{
 		[Serializable]
 		public struct RowInfo
@@ -5368,7 +5368,7 @@ namespace mgControls
 
 		#region IXtraResizableControl Members
 
-		public event EventHandler Changed;
+		public new event EventHandler SizeChanged;
 
 		public bool IsCaptionVisible
 		{

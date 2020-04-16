@@ -148,26 +148,26 @@
             // chartMain
             // 
             xyDiagram1.AxisX.Label.Angle = -90;
-            xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram1.AxisX.Range.SideMarginsEnabled = true;
+            //xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
+            //xyDiagram1.AxisX.Range.SideMarginsEnabled = true;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram1.AxisY.Range.SideMarginsEnabled = true;
+            //xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
+            //xyDiagram1.AxisY.Range.SideMarginsEnabled = true;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartMain.Diagram = xyDiagram1;
-            this.chartMain.Legend.Visible = false;
+            //this.chartMain.Legend.Visible = false;
             this.chartMain.Location = new System.Drawing.Point(5, 111);
             this.chartMain.Name = "chartMain";
-            sideBySideBarSeriesLabel1.LineVisible = true;
+            //sideBySideBarSeriesLabel1.LineVisible = true;
             series1.Label = sideBySideBarSeriesLabel1;
             series1.Name = "Series 1";
-            sideBySideBarSeriesLabel2.LineVisible = true;
+            //sideBySideBarSeriesLabel2.LineVisible = true;
             series2.Label = sideBySideBarSeriesLabel2;
             series2.Name = "Series 2";
             this.chartMain.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2};
-            sideBySideBarSeriesLabel3.LineVisible = true;
+            //sideBySideBarSeriesLabel3.LineVisible = true;
             this.chartMain.SeriesTemplate.Label = sideBySideBarSeriesLabel3;
             this.chartMain.SideBySideEqualBarWidth = true;
             this.chartMain.Size = new System.Drawing.Size(1121, 255);
@@ -181,7 +181,7 @@
             // 
             // layoutMain
             // 
-            this.layoutMain.AllowCustomizationMenu = false;
+            //this.layoutMain.AllowCustomizationMenu = false;
             this.layoutMain.BackColor = System.Drawing.Color.White;
             this.layoutMain.Controls.Add(this.lblProcessing);
             this.layoutMain.Controls.Add(this.prg);
