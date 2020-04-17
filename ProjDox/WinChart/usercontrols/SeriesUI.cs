@@ -333,22 +333,22 @@ namespace mgWinChart.usercontrols
         /// </summary>
         protected override void UpdateBarShape()
         {            
-            if (Series.View is Bar3DSeriesView)
-            {
-                if (cboBarShape.SelectedItem == null)
-                {
-                    cboBarShape.SelectedItem = "default";
-                    return;
-                }
-                if (cboBarShape.SelectedItem.ToString().ToLower().Equals(cboBarShape.SelectedItem))
-                {
-                    ((Bar3DSeriesView)Series.View).Model = ParentChart.ModelType;
-                }
-                else
-                {
-                    ((Bar3DSeriesView)Series.View).Model = GenericEnumConverter.ValueForString<Bar3DModel>((string)cboBarShape.SelectedItem);
-                }
-            }
+            //if (Series.View is Bar3DSeriesView)
+            //{
+            //    if (cboBarShape.SelectedItem == null)
+            //    {
+            //        cboBarShape.SelectedItem = "default";
+            //        return;
+            //    }
+            //    if (cboBarShape.SelectedItem.ToString().ToLower().Equals(cboBarShape.SelectedItem))
+            //    {
+            //        ((Bar3DSeriesView)Series.View).Model = ParentChart.ModelType;
+            //    }
+            //    else
+            //    {
+            //        ((Bar3DSeriesView)Series.View).Model = GenericEnumConverter.ValueForString<Bar3DModel>((string)cboBarShape.SelectedItem);
+            //    }
+            //}
         }
         /// <summary>
         /// Updates the Series's BarSeriesLabelPosition to match the user's choice.
@@ -375,7 +375,7 @@ namespace mgWinChart.usercontrols
      //               cboPosition.SelectedItem = "Top Inside";
      //           }
                 string cleanedString = ((string)cboPosition.SelectedItem).Replace(" ", "");
-                ((BarSeriesLabel)Series.Label).Position = GenericEnumConverter.ValueForString<BarSeriesLabelPosition>(cleanedString);
+                //((BarSeriesLabel)Series.Label).Position = GenericEnumConverter.ValueForString<BarSeriesLabelPosition>(cleanedString);
             }
         }
         /// <summary>

@@ -58,7 +58,7 @@ namespace mgCustom
 		}
 		#endregion constructors
 
-		public static BeforeEncrypting beforeEncrypting;
+		//public static BeforeEncrypting beforeEncrypting;
 
 		/// <summary>
 		/// Encrypts cleartext and returns the cipherText

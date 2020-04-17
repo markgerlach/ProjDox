@@ -369,6 +369,9 @@
     <EmbeddedResource Include="WinChart\usercontrols\WinChart.resx">
       <DependentUpon>WinChart.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

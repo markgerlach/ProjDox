@@ -1095,26 +1095,27 @@ namespace mgWinChart.usercontrols
         [Category("Appearance")]
         [DefaultValue(5)]
         [Description("The distance exploded pie/doughnut segments are removed from the center (in percentage of the chart's radius).")]
-        public uint ExplodeDistance
+        public int ExplodeDistance
         {
             get
             {
-                return _visualSettings.ExplodeDistance;
+                //return _visualSettings.ExplodeDistance;
+                return 0;
             }
             set
             {
-                if (_visualSettings.ExplodeDistance != value)
-                {
-                    if (value > 100)
-                    {
-                        _visualSettings.ExplodeDistance = 100;
-                    }
-                    else
-                    {
-                        _visualSettings.ExplodeDistance = value;
-                    }
-                    this.MarkAsDirty(UpdatableElement.ExplodeDistance);
-                }
+                //if (_visualSettings.ExplodeDistance != value)
+                //{
+                //    if (value > 100)
+                //    {
+                //        _visualSettings.ExplodeDistance = 100;
+                //    }
+                //    else
+                //    {
+                //        _visualSettings.ExplodeDistance = value;
+                //    }
+                //    this.MarkAsDirty(UpdatableElement.ExplodeDistance);
+                //}
             }
         }
 
@@ -1234,16 +1235,17 @@ namespace mgWinChart.usercontrols
         [Category("Behavior")]
         [DefaultValue(5)]
         [Description("The number of records to show, counting from the greatest, before grouping everything else into 'Other'.")]
-        public uint NumberOfRecordsToShow
+        public int NumberOfRecordsToShow
         {
             get
             {
-                return _visualSettings.NumberOfRecordsToShow;
+                return 0;
+                //return _visualSettings.NumberOfRecordsToShow;
             }
             set
             {
-                _visualSettings.NumberOfRecordsToShow = value;
-                this.MarkAsDirty(UpdatableElement.NumberOfRecordsToShow);
+                //_visualSettings.NumberOfRecordsToShow = value;
+                //this.MarkAsDirty(UpdatableElement.NumberOfRecordsToShow);
             }
         }
 
@@ -3294,7 +3296,7 @@ namespace mgWinChart.usercontrols
 
         private void barExplodedDist_EditValueChanged(object sender, EventArgs e)
         {
-            this.ExplodeDistance = Convert.ToUInt32(barExplodedDist.EditValue.ToString());
+            this.ExplodeDistance = Convert.ToInt32(barExplodedDist.EditValue.ToString());
         }
 
         #endregion Pie & Doughnut group
@@ -3315,7 +3317,7 @@ namespace mgWinChart.usercontrols
             }
             else
             {
-                this.NumberOfRecordsToShow = Convert.ToUInt32(editValue);
+                this.NumberOfRecordsToShow = Convert.ToInt32(editValue);
             }
         }
 
