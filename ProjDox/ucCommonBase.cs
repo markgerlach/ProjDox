@@ -111,29 +111,8 @@ namespace ProjDox
 
 		#region IXtraResizableControl Members
 
-		// Disable warning - 
-		/*
-			 * class Test
-				{
-				#pragma warning disable 169, 414
-					int unused;
-					int assigned = 3;
-				}
-		 * 
-		 * */
-
-		//#pragma warning disable 169, 414
-		//		public event EventHandler Unsupported
-		//		{
-		//			add { throw new NotSupportedException(); }
-		//			remove { }
-		//		}
-		//#pragma warning restore 169, 414
-
-//#pragma warning disable 0067
-//		// Just let the warning go
-//		public event EventHandler NotImplemented { add { throw new NotImplementedException(); } remove { } }
-//#pragma warning restore 0067
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CS0067")]
+		public new event EventHandler SizeChanged { add { } remove { } }
 
 		public bool IsCaptionVisible
 		{

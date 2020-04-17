@@ -159,22 +159,23 @@ namespace mgControls
 			int top = 0, lineSpacer = 4;
 			foreach (object cntrl in _controlArray)
 			{
-				if (cntrl is mgWinChart.usercontrols.ucWinChart)
-				{
-					#region Print Chart
-					XRChart rptChart = new XRChart();
-					IChartContainer cc = rptChart as IChartContainer;
-					cc.Chart.Assign(((IChartContainer)((mgWinChart.usercontrols.ucWinChart)cntrl).DevXChart).Chart);
-					rptChart.LocationF = new PointF(0, 0);
-					rptChart.WidthF = rpt.PageWidth - rpt.Margins.Left - rpt.Margins.Right;
-					rptChart.HeightF = rptChart.WidthF / 2;
+				//if (cntrl is mgWinChart.usercontrols.ucWinChart)
+				//{
+				//	#region Print Chart
+				//	XRChart rptChart = new XRChart();
+				//	IChartContainer cc = rptChart as IChartContainer;
+				//	cc.Chart.Assign(((IChartContainer)((mgWinChart.usercontrols.ucWinChart)cntrl).DevXChart).Chart);
+				//	rptChart.LocationF = new PointF(0, 0);
+				//	rptChart.WidthF = rpt.PageWidth - rpt.Margins.Left - rpt.Margins.Right;
+				//	rptChart.HeightF = rptChart.WidthF / 2;
 					
-					rpt.Bands[BandKind.Detail].Controls.Add(rptChart);
+				//	rpt.Bands[BandKind.Detail].Controls.Add(rptChart);
 
-					top = (int)rptChart.BottomF + (lineSpacer * 5);
-					#endregion Print Chart
-				}
-				else if (cntrl is mgDevX_GridControl)
+				//	top = (int)rptChart.BottomF + (lineSpacer * 5);
+				//	#endregion Print Chart
+				//}
+				//else 
+				if (cntrl is mgDevX_GridControl)
 				{
 					#region Print Grid
 					// Try to do this in a sub report

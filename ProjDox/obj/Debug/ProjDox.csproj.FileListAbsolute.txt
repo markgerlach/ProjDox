@@ -184,12 +184,6 @@ D:\source\repos\ProjDox\ProjDox\obj\Debug\mgControls.mgDevX_Label_Hyperlink.reso
 D:\source\repos\ProjDox\ProjDox\obj\Debug\mgControls.mgGradientLabel.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.controls.mgTooltipResources.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.Properties.Resources.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.WinChart.resChart.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\mgWinChart.Test_Forms.frmDevXChartTester.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\mgWinChart.usercontrols.GeneralUI.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\mgWinChart.usercontrols.SeriesUI.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\mgWinChart.usercontrols.ucRealTimeChart.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\mgWinChart.usercontrols.ucWinChart.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.csproj.GenerateResource.cache
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.exe.licenses
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.csproj.CoreCompileInputs.cache
@@ -200,7 +194,6 @@ D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.csprojAssemblyReference.cache
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.res16x16.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.res24x24.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.res32x32.resources
-D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frmChild.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frmMain.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frmDialogErrorView.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.ucCommonBase.resources

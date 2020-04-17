@@ -673,7 +673,8 @@ namespace mgControls
 
 		#region IXtraResizableControl Members
 
-		public event EventHandler SizeChanged;
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CS0067")]
+		public new event EventHandler SizeChanged { add { } remove { } }
 
 		public bool IsCaptionVisible
 		{
