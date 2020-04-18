@@ -199,3 +199,12 @@ D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frmDialogErrorView.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.ucCommonBase.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.ucErrorView.resources
 D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.frm_ProjDox.resources
+D:\source\repos\ProjDox\ProjDox\bin\Debug\DevExpress.Dialogs.v19.2.Core.dll
+D:\source\repos\ProjDox\ProjDox\bin\Debug\DevExpress.XtraDialogs.v19.2.dll
+D:\source\repos\ProjDox\ProjDox\bin\Debug\DevExpress.XtraDialogs.v19.2.xml
+D:\source\repos\ProjDox\ProjDox\bin\Debug\de\DevExpress.Dialogs.v19.2.Core.resources.dll
+D:\source\repos\ProjDox\ProjDox\bin\Debug\es\DevExpress.Dialogs.v19.2.Core.resources.dll
+D:\source\repos\ProjDox\ProjDox\bin\Debug\ja\DevExpress.Dialogs.v19.2.Core.resources.dll
+D:\source\repos\ProjDox\ProjDox\bin\Debug\ru\DevExpress.Dialogs.v19.2.Core.resources.dll
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.Form1.resources
+D:\source\repos\ProjDox\ProjDox\obj\Debug\ProjDox.MDIParent1.resources
